@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario E-commerce</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        .tittle-formulario {
+            height: 230px;
+            background-image: url('img/fondo-formularios.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #6f2bff;
+            box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
+        }
+
+        h2 {
+            font-size: 40px;
+            text-shadow: 0 0 15px #a56fff;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1030px;
+            margin: 40px auto;
+            gap: 25px;
+        }
+
+        .menu-padre {
+            width: 200px;
+            padding-right: 50px;
+        }
+
+        .menu-hijo {
+            width: 200px;
+            padding: 20px;
+            background: #0b0b0d;
+            border-radius: 15px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
+            position: fixed;
+        }
+
+        .menu-hijo ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-hijo li {
+            margin-bottom: 12px;
+        }
+
+        .menu-hijo a {
+            color: #cda6ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-hijo a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #a56fff;
+        }
+
+        .content {
+            flex: 1;
+            background: #0b0b0d;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+        }
+
+        .service-block {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(150, 64, 255, 0.3);
+        }
+
+        .service-block h3 {
+            color: #cda6ff;
+            text-shadow: 0 0 7px #6f2bff;
+        }
+
+        .numbers button {
+            margin: 4px;
+            padding: 8px 14px;
+            background: #000;
+            color: #cda6ff;
+            border: 1px solid #6f2bff;
+            border-radius: 7px;
+            cursor: pointer;
+
+        }
+
+        .numbers button.active {
+            background: #a56fff;
+            color: #000;
+            box-shadow: 0 0 15px #a56fff;
+        }
+
+        .menu-padre-derecha {
+            width: 200px;
+            height: fit-content;
+        }
+
+        .summary {
+            width: 200px;
+            background: #0b0b0d;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+
+            position: fixed;
+            top: 300px;
+
+            left: 50%;
+            transform: translateX(325px);
+        }
+
+        .total {
+            font-size: 24px;
+            color: #cda6ff;
+            text-shadow: 0 0 10px #a56fff;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #a56fff, #6f2bff);
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            background: #000;
+            border: 1px solid #6f2bff;
+            border-radius: 10px;
+            color: #cda6ff;
+            font-size: 15px;
+            outline: none;
+            transition: 0.25s;
+        }
+        /** TOOLTIP **/
+
+        .tooltip button {
+            position: relative;
+        }
+
+        .tooltip button::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0b0b0d;
+            color: #cda6ff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #6f2bff;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: 0 0 15px rgba(165, 111, 255, 0.4);
+            transition: 0.25s ease;
+            z-index: 10;
+        }
+
+        .tooltip button:hover::after,
+        .numbers button:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="tittle-formulario">
+        <h2>SERVICIOS</h2>
+    </section>
+    <div class="container">
+        <!-- MENU -->
+        <div class="menu-padre">
+            <div class="menu-hijo">
+                <ul>
+                    <li><a href="#productos">1. Productos</a></li>
+                    <li><a href="#pagos">2. Pagos</a></li>
+                    <li><a href="#envios">3. Envíos</a></li>
+                    <li><a href="#cupones">4. Cupones</a></li>
+                    <li><a href="#clientes">5. Clientes</a></li>
+                    <li><a href="#seo">6. SEO</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="service-block">
+                <h3>1. Información básica</h3>
+                <div class="form-group">
+                    <select>
+                        <option selected disabled>Sector del negocio</option>
+                        <option>Moda</option>
+                        <option>Electrónica</option>
+                        <option>Alimentación</option>
+                        <option>Servicios</option>
+                        <option>Digital</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productos" class="service-block">
+                <h3>2. Número de productos (5€ / producto)</h3>
+                <div class="numbers" id="productosNum"></div>
+            </div>
+
+            <div id="pagos" class="service-block">
+                <h3>3. Métodos de pago</h3>
+                <p>Vienen incluidos la tarjeta y paypal si quieres extras son 40 euros cada uno extras</p>
+                <div class="numbers">
+                    <button id="pagoBizum">Bizum</button>
+                    <button id="pagoTransferencia">Transferencia</button>
+                </div>
+            </div>
+
+            <div id="envios" class="service-block">
+                <h3>4. Sistema de envíos (100€)</h3>
+                <p>Entra lo siguiente en tipo de envios Precio fijo, Envío gratuito, Por zona y Recogida en tienda</p>
+                <div class="numbers">
+                    <button id="envioSi">Sí</button>
+                    <button id="envioNo">No</button>
+                </div>
+            </div>
+            <div id="extras" class="service-block">
+                <h3>5. Extras </h3>
+                <p>Son 50 euros cada extra</p>
+                <div class="numbers tooltip ">
+                    <button id="ExtraSEO" data-tooltip="Optimización SEO básica para mejorar visibilidad en Google">
+                        SEO
+                    </button>
+                    <button id="ExtraAreaClientes" data-tooltip="Área privada para clientes con historial de pedidos">
+                        Área de clientes
+                    </button>
+                    <button id="ExtraCupones" data-tooltip="Sistema de cupones y descuentos configurables">
+                        Cupones
+                    </button>
+
+                    <button id="ExtraEmailsAutomaticos"
+                        data-tooltip="Emails automáticos: pedidos, registro y notificaciones">
+                        Emails automáticos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <!-- RESUMEN DERECHA -->
+         <div class="menu-padre-derecha">
+            <div class="summary">
+            <p>Servicios seleccionados:</p>
+            <p class="total">Total: <span id="total">0</span>€</p>
+            <button class="btn-enviar">ENVIAR SOLICITUD</button>
+        </div>
+    </div>
+
+
+    <script>
+        const productosDiv = document.getElementById("productosNum");
+        const totalSpan = document.getElementById("total");
+
+        const envioSi = document.getElementById("envioSi");
+        const envioNo = document.getElementById("envioNo");
+
+        const pagoBizum = document.getElementById("pagoBizum");
+        const pagoTransferencia = document.getElementById("pagoTransferencia");
+
+        const extraSEO = document.getElementById("ExtraSEO");
+        const extraClientes = document.getElementById("ExtraAreaClientes");
+        const extraCupones = document.getElementById("ExtraCupones");
+        const extraEmails = document.getElementById("ExtraEmailsAutomaticos");
+
+        let productos = 0;
+        let envio = false;
+        let pagosExtra = 0;
+        let extras = 0;
+
+        // PRODUCTOS
+        for (let i = 10; i <= 200; i += 10) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.onclick = () => {
+                productos = i;
+                [...productosDiv.children].forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                calcular();
+            };
+            productosDiv.appendChild(btn);
+        }
+
+        // ENVÍOS
+        envioSi.onclick = () => {
+            envio = true;
+            envioSi.classList.add("active");
+            envioNo.classList.remove("active");
+            calcular();
+        };
+
+        envioNo.onclick = () => {
+            envio = false;
+            envioNo.classList.add("active");
+            envioSi.classList.remove("active");
+            calcular();
+        };
+
+        // PAGOS EXTRA (40€ cada uno)
+        function togglePago(btn) {
+            btn.onclick = () => {
+                btn.classList.toggle("active");
+                pagosExtra = document.querySelectorAll("#pagos .active").length * 40;
+                calcular();
+            };
+        }
+
+        togglePago(pagoBizum);
+        togglePago(pagoTransferencia);
+
+        // EXTRAS (50€ cada uno)
+        function toggleExtra(btn) {
+            btn.onclick = () => {
+                btn.classList.toggle("active");
+                extras = document.querySelectorAll("#extras .active").length * 50;
+                calcular();
+            };
+        }
+
+        toggleExtra(extraSEO);
+        toggleExtra(extraClientes);
+        toggleExtra(extraCupones);
+        toggleExtra(extraEmails);
+
+        function calcular() {
+            let total =
+                productos * 5 +
+                (envio ? 100 : 0) +
+                pagosExtra +
+                extras;
+
+            totalSpan.textContent = total;
+        }
+    </script>
+</body>
+</html>
