@@ -178,6 +178,17 @@
             transform: scale(1.05);
             box-shadow: 0 0 18px #a56fff;
         }
+          .textos{
+            margin-top: 10px;
+            margin-bottom: 18px;
+            color: #b98cff;
+            font-size: 14px;
+            line-height: 1.6;
+            background: rgba(111, 43, 255, 0.08);
+            padding: 12px 15px;
+            border-left: 3px solid #6f2bff;
+            border-radius: 8px;
+        }
     </style>
 </head>
 
@@ -190,6 +201,7 @@
         <!-- MENÚ IZQUIERDO -->
         <div class="menu-padre">
             <div class="menu-hijo">
+                <h3>Menu</h3>
                 <ul>
                     <li><a href="#manBasico">1. Basico</a></li>
                     <li><a href="#manAvanzado">2. Avanzado</a></li>
@@ -198,23 +210,37 @@
             </div>
         </div>
         <div class="content">
+        <h3>Formulario</h3>
+            <p class="textos">
+                Mantén tu página web siempre actualizada, segura y optimizada con nuestros planes de mantenimiento mensual. 
+                Nos encargamos de la parte técnica para que tú puedas centrarte en hacer crecer tu negocio. 
+                Elige el plan que mejor se adapte a tus necesidades y nivel de soporte requerido.
+            </p>
             <div  class="service-block">
                 <h3>1. Mantenimiento Básico</h3>
-                <p>Actualizaciones básicas, copias de seguridad y soporte básico</p>
+                <p class="textos">
+                    Ideal para páginas web corporativas o proyectos pequeños que necesitan 
+                    estabilidad y actualizaciones periódicas. Incluye actualizaciones del sistema, 
+                    copias de seguridad mensuales y soporte técnico básico por incidencias.
+                </p>
                 <button id="mantBasico"  class="numbers">
                     Básico · 30€/mes
                 </button>
             </div>
             <div class="service-block">
                 <h3>2. Mantenimiento Avanzado</h3>
-                <p>Soporte avanzado, seguridad, optimización y cambios menores</p>
+                <p class="textos">Pensado para negocios que requieren mayor seguridad y mejoras continuas. 
+                    Incluye monitorización, optimización de rendimiento, refuerzo de seguridad, 
+                    copias de seguridad automáticas y pequeños cambios o ajustes mensuales.</p>
                 <button id="mantAvanzado" class="numbers">
                     Avanzado · 60€/mes
                 </button>
             </div>
             <div class="service-block">
                 <h3>3. Mantenimiento Premium</h3>
-                <p>Soporte prioritario, cambios ilimitados y optimización completa</p>
+                <p class="textos">Servicio completo para empresas que necesitan máxima prioridad y evolución constante. 
+                    Incluye soporte prioritario, cambios ilimitados, optimización avanzada, 
+                    control de seguridad proactivo y asesoramiento técnico continuo.</p>
                 <button id="mantPremium" class="numbers">
                     Premium · 100€/mes
                 </button>
@@ -223,7 +249,7 @@
        <!-- RESUMEN DERECHA -->
          <div class="menu-padre-derecha">
             <div class="summary">
-            <p>Servicios seleccionados:</p>
+            <h3>Precio</h3>
             <p class="total">Total: <span id="total">0</span>€</p>
             <button class="btn-enviar">ENVIAR SOLICITUD</button>
         </div>

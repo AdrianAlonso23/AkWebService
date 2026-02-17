@@ -13,7 +13,6 @@
             background: #000;
             color: #fff;
         }
-
         .tittle-formulario {
             height: 230px;
             background-image: url('img/fondo-formularios.png');
@@ -25,10 +24,20 @@
             border-bottom: 2px solid #6f2bff;
             box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
         }
-
         h2 {
             font-size: 40px;
             text-shadow: 0 0 15px #a56fff;
+        }
+        .textos{
+            margin-top: 10px;
+            margin-bottom: 18px;
+            color: #b98cff;
+            font-size: 14px;
+            line-height: 1.6;
+            background: rgba(111, 43, 255, 0.08);
+            padding: 12px 15px;
+            border-left: 3px solid #6f2bff;
+            border-radius: 8px;
         }
 
         .container {
@@ -87,7 +96,6 @@
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(150, 64, 255, 0.3);
         }
-
         .service-block h3 {
             color: #cda6ff;
             text-shadow: 0 0 7px #6f2bff;
@@ -199,6 +207,7 @@
         <!-- MENU -->
         <div class="menu-padre">
             <div class="menu-hijo">
+                <H3>Menú</H3>
                 <ul>
                     <li><a href="#productos">1. Productos</a></li>
                     <li><a href="#pagos">2. Pagos</a></li>
@@ -212,6 +221,13 @@
 
         <!-- CONTENT -->
         <div class="content">
+            <h3>Formulario</h3>
+            <h5 class="textos">
+                Este formulario te permite configurar los servicios necesarios para tu tienda online o proyecto digital. 
+                Podrás seleccionar el sector de tu negocio, el número de productos, los métodos de pago, el sistema de envíos 
+                y diferentes funcionalidades extra. El presupuesto se calculará automáticamente en función de las opciones 
+                que elijas.    
+            </h5>
             <div class="service-block">
                 <h3>1. Información básica</h3>
                 <div class="form-group">
@@ -233,7 +249,7 @@
 
             <div id="pagos" class="service-block">
                 <h3>3. Métodos de pago</h3>
-                <p>Vienen incluidos la tarjeta y paypal si quieres extras son 40 euros cada uno extras</p>
+                <p class="textos">Incluimos por defecto pago con tarjeta y PayPal. Si necesitas métodos adicionales como Bizum o Transferencia bancaria, podrás añadirlos como extras por 40€ cada uno.</p>
                 <div class="numbers">
                     <button id="pagoBizum">Bizum</button>
                     <button id="pagoTransferencia">Transferencia</button>
@@ -242,7 +258,9 @@
 
             <div id="envios" class="service-block">
                 <h3>4. Sistema de envíos (100€)</h3>
-                <p>Entra lo siguiente en tipo de envios Precio fijo, Envío gratuito, Por zona y Recogida en tienda</p>
+                <p class="textos">
+                    El sistema de envíos incluye configuración completa con: precio fijo, envío gratuito, cálculo por zonas y opción de recogida en tienda. Todo adaptado a las necesidades de tu negocio.
+                </p>
                 <div class="numbers">
                     <button id="envioSi">Sí</button>
                     <button id="envioNo">No</button>
@@ -250,7 +268,11 @@
             </div>
             <div id="extras" class="service-block">
                 <h3>5. Extras </h3>
-                <p>Son 50 euros cada extra</p>
+                <p class="textos">
+                    Puedes añadir funcionalidades adicionales para mejorar el rendimiento 
+                    y la experiencia de tu tienda online. Cada extra tiene un coste de 50€ 
+                        y se integrará completamente en tu proyecto.
+                </p>                
                 <div class="numbers tooltip ">
                     <button id="ExtraSEO" data-tooltip="Optimización SEO básica para mejorar visibilidad en Google">
                         SEO
@@ -273,6 +295,7 @@
          <!-- RESUMEN DERECHA -->
          <div class="menu-padre-derecha">
             <div class="summary">
+            <h3>Precio</h3>
             <p>Servicios seleccionados:</p>
             <p class="total">Total: <span id="total">0</span>€</p>
             <button class="btn-enviar">ENVIAR SOLICITUD</button>
