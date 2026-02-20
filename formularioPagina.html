@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Servicios</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        /* TÍTULO */
+        .tittle-formulario {
+            height: 230px;
+            background-image: url('img/fondo-formularios.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #6f2bff;
+            box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 40px;
+            text-shadow: 0 0 15px #a56fff;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1030px;
+            margin: 40px auto;
+            gap: 25px;
+        }
+
+        /* MENÚ IZQUIERDO */
+        .menu-padre {
+            width: 200px;
+            height: fit-content;
+            padding-right: 50px;
+
+        }
+
+        .menu-hijo {
+            width: 200px;
+            padding: 20px;
+            background: #0b0b0d;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
+            border-radius: 15px;
+            border: 1px solid #6f2bff;
+            position: fixed;
+        }
+
+        .menu-hijo ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu-hijo li {
+            margin-bottom: 12px;
+        }
+
+        .menu-hijo a {
+            text-decoration: none;
+            color: #cda6ff;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .menu-hijo a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #a56fff;
+        }
+
+        .content {
+            flex: 1;
+            background: #0b0b0d;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+        }
+
+        .service-block {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(150, 64, 255, 0.3);
+        }
+
+        .service-block h3 {
+            margin: 0 0 10px;
+            color: #cda6ff;
+            text-shadow: 0 0 7px #6f2bff;
+        }
+
+        .service-block p {
+            opacity: 0.8;
+        }
+
+        .numbers button {
+            margin: 4px;
+            padding: 8px 14px;
+            border: 1px solid #6f2bff;
+            background: #000;
+            color: #cda6ff;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: 0.25s;
+        }
+
+        .numbers button:hover {
+            background: #6f2bff;
+            color: #000;
+            box-shadow: 0 0 12px #a56fff;
+        }
+
+        .numbers button.active {
+            background: #a56fff;
+            color: #000;
+            box-shadow: 0 0 15px #a56fff;
+        }
+
+        .menu-padre-derecha {
+            width: 200px;
+            height: fit-content;
+        }
+
+        .summary {
+            width: 200px;
+            background: #0b0b0d;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+
+            position: fixed;
+            top: 300px;
+
+            left: 50%;
+            transform: translateX(325px);
+        }
+
+
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #cda6ff;
+            text-shadow: 0 0 10px #a56fff;
+        }
+
+        /* BOTÓN ENVIAR */
+        .btn-enviar {
+            background: linear-gradient(90deg, #a56fff, #6f2bff);
+            color: #000;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .btn-enviar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 18px #a56fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="tittle-formulario">
+        <h2>SERVICIOS</h2>
+    </section>
+    <div class="container">
+        <!-- MENÚ IZQUIERDO -->
+        <div class="menu-padre">
+            <div class="menu-hijo">
+                <ul>
+                    <li><a href="#DivApartados">1. Apartados</a></li>
+                    <li><a href="#DivTextos">2. Textos</a></li>
+                    <li><a href="#DivSeo">3. Posicionamiento</a></li>
+                    <li><a href="#DivIdiomas">4. Idiomas</a></li>
+                    <li><a href="#DivBlog">5. Blog</a></li>
+                    <li><a href="#DivImagenes">6. Imágenes</a></li>
+                    <li><a href="#DivBD">7. Bases de datos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content">
+
+            <div id="DivApartados" class="service-block">
+                <h3>1. Apartados (200€ / cada uno)</h3>
+                <p>Selecciona cuántos apartados quieres:</p>
+                <div class="numbers" id="apartados"></div>
+            </div>
+
+            <div id="DivTextos" class="service-block">
+                <h3>2. Textos de calidad</h3>
+                <p>Textos entre 500 y 1000 palabras. Precio fijo: 60€</p>
+                <div class="numbers">
+                    <button id="textosSi">Sí</button>
+                    <button id="textosNo">No</button>
+                </div>
+            </div>
+            <div id="DivSeo" class="service-block">
+                <h3>3. Posicionamiento en Google</h3>
+                <p>Optimización avanzada. Precio fijo: 699€</p>
+                <div class="numbers">
+                    <button id="SEOsSi">Sí</button>
+                    <button id="SEOsNo">No</button>
+                </div>
+            </div>
+            <div id="DivIdiomas" class="service-block">
+                <h3>4. Idiomas adicionales</h3>
+                <p>cada idioma extra son 200 euros</p>
+                <div class="numbers" id="apartadosIdiomas"></div>
+            </div>
+            <div id="DivBlog" class="service-block">
+                <h3>5. Blog o apartado de noticiase</h3>
+                <p>199</p>
+                <div class="numbers">
+                    <button id="BlogSi">Sí</button>
+                    <button id="BlogNo">No</button>
+                </div>
+            </div>
+
+            <div id="DivImagenes" class="service-block">
+                <h3>6. Imágenes profesionales</h3>
+                <p>300</p>
+                <div class="numbers">
+                    <button id="ImagenesSi">Sí</button>
+                    <button id="ImagenesNo">No</button>
+                </div>
+            </div>
+            <div id="DivBD" class="service-block">
+                <h3>7. Importación de base de datos web</h3>
+                <p>200</p>
+                <div class="numbers">
+                    <button id="BDSi">Sí</button>
+                    <button id="BDNo">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMEN DERECHA -->
+        <div class="menu-padre-derecha">
+            <div class="summary">
+                <p>Servicios seleccionados:</p>
+                <p class="total">Total: <span id="total">0</span>€</p>
+                <button class="btn-enviar">ENVIAR SOLICITUD</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const numContainer = document.getElementById('apartados');
+        const totalSpan = document.getElementById('total');
+
+        const btnTextosSi = document.getElementById('textosSi');
+        const btnTextosNo = document.getElementById('textosNo');
+
+        const btnSEOsSi = document.getElementById('SEOsSi');
+        const btnSEONo = document.getElementById('SEOsNo');
+
+        const numIdiomas = document.getElementById('apartadosIdiomas');
+
+
+        const btnBlogSi = document.getElementById('BlogSi');
+        const btnBlogNo = document.getElementById('BlogNo');
+
+        const btnImagenesSi = document.getElementById('ImagenesSi');
+        const btnImagenesNo = document.getElementById('ImagenesNo');
+
+        const btnBDSi = document.getElementById('BDSi');
+        const btnBDNo = document.getElementById('BDNo')
+
+        let apartados = 0;
+        let incluirTextos = false;
+        let incluirSEO = false;
+        let apartadosIdiomas = 0;
+        let incluirBlog = false;
+        let incluirImagenes = false;
+        let incluiBD = false;
+        let total = 0;
+
+        // Crear botones 1-12
+        for (let i = 1; i <= 12; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.addEventListener('click', () => {
+                apartados = i;
+                updateButtonsApartados();
+                calcularTotal();
+            });
+            numContainer.appendChild(btn);
+        }
+
+        function updateButtonsApartados() {
+            [...numContainer.children].forEach(btn => btn.classList.remove('active'));
+            numContainer.children[apartados - 1].classList.add('active');
+        }
+
+        // Botón Sí
+        btnTextosSi.addEventListener('click', () => {
+            incluirTextos = true;
+            btnTextosSi.classList.add("active");
+            btnTextosNo.classList.remove("active");
+            calcularTotal();
+        });
+
+        // Botón No
+        btnTextosNo.addEventListener('click', () => {
+            incluirTextos = false;
+            btnTextosNo.classList.add("active");
+            btnTextosSi.classList.remove("active");
+            calcularTotal();
+        });
+
+        // SEO Sí
+        btnSEOsSi.addEventListener('click', () => {
+            incluirSEO = true;
+            btnSEOsSi.classList.add("active");
+            btnSEONo.classList.remove("active");
+            calcularTotal();
+        });
+
+        // SEO No
+        btnSEONo.addEventListener('click', () => {
+            incluirSEO = false;
+            btnSEONo.classList.add("active");
+            btnSEOsSi.classList.remove("active");
+            calcularTotal();
+        });
+
+        // crear idiomas
+        for (let i = 1; i <= 3; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.addEventListener('click', () => {
+                apartadosIdiomas = i;
+                updateButtons();
+                calcularTotal();
+            });
+            numIdiomas.appendChild(btn);
+        }
+
+        function updateButtons() {
+            [...numIdiomas.children].forEach(btn => btn.classList.remove('active'));
+            numIdiomas.children[apartadosIdiomas - 1].classList.add('active');
+        }
+        // Blog Sí
+        btnBlogSi.addEventListener('click', () => {
+            incluirBlog = true;
+            btnBlogSi.classList.add("active");
+            btnBlogNo.classList.remove("active");
+            calcularTotal();
+        });
+
+        // Blog No
+        btnBlogNo.addEventListener('click', () => {
+            incluirBlog = false;
+            btnBlogNo.classList.add("active");
+            btnBlogSi.classList.remove("active");
+            calcularTotal();
+        });
+
+        // Imagenes Sí
+        btnImagenesSi.addEventListener('click', () => {
+            incluirImagenes = true;
+            btnImagenesSi.classList.add("active");
+            btnImagenesNo.classList.remove("active");
+            calcularTotal();
+        });
+
+        // imagenes No
+        btnImagenesNo.addEventListener('click', () => {
+            incluirImagenes = false;
+            btnImagenesNo.classList.add("active");
+            btnImagenesSi.classList.remove("active");
+            calcularTotal();
+        });
+
+        // BD Sí
+        btnBDSi.addEventListener('click', () => {
+            incluiBD = true;
+            btnBDSi.classList.add("active");
+            btnBDNo.classList.remove("active");
+            calcularTotal();
+        });
+
+        // BD No
+        btnBDNo.addEventListener('click', () => {
+            incluiBD = false;
+            btnBDNo.classList.add("active");
+            btnBDSi.classList.remove("active");
+            calcularTotal();
+        });
+
+        //Total
+        function calcularTotal() {
+            total = apartados * 200
+                + (incluirTextos ? 60 : 0)
+                + (incluirSEO ? 699 : 0)
+                + apartadosIdiomas * 200
+                + (incluirBlog ? 199 : 0)
+                + (incluirImagenes ? 300 : 0)
+                + (incluiBD ? 200 : 0);
+
+
+            totalSpan.textContent = total;
+        }
+    </script>
+
+</body>
+
+</html>

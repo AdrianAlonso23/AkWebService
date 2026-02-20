@@ -1,0 +1,8 @@
+# VS Code
+.vscode/
+
+# Archivos de XAMPP temporales
+xampp/
+
+# Archivos comprimidos
+*.zip
