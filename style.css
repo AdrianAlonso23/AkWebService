@@ -23,7 +23,6 @@ header {
   border-bottom: 2px solid grey;
   background-color: var(--dark);
 }
-
 nav{
   display: flex;
   align-items: center;
