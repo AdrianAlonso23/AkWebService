@@ -1,30 +1,22 @@
 <div>
-    <?php include_once ('header.php');?>
+    <?php include_once ('header.php'); ?>
 </div>
-<div id="posts"></div>
-<script>
-fetch("https://akwebservice.bernat26.es/?rest_route=/wp/v2/posts")
-  .then(response => response.json())
-  .then(posts => {
-    const contenedor = document.getElementById("posts");
 
-    posts.forEach(post => {
-      const article = document.createElement("article");
+<div id="posts">
+<?php
+$response = file_get_contents("https://akwebservice.bernat26.es/?rest_route=/wp/v2/posts");
+$posts = json_decode($response);
 
-      article.innerHTML = `
-        <h2>${post.title.rendered}</h2>
-        <small>Publicado el ${new Date(post.date).toLocaleDateString()}</small>
-        <div>${post.content.rendered}</div>
-        <hr>
-      `;
+foreach ($posts as $post) {
+    echo "<article>";
+    echo "<h2><a href='post.php?id={$post->id}'>{$post->title->rendered}</a></h2>";
+    echo "<div class='post-content'>{$post->excerpt->rendered}</div>";
+    echo "<a class='post-card-btn' href='post.php?id={$post->id}'>Leer más →</a>";
+    echo "</article>";
+}
+?>
+</div>
 
-      contenedor.appendChild(article);
-    });
-  })
-  .catch(error => {
-    console.error("Error cargando posts:", error);
-  });
-</script>
 <div>
-    <?php include_once ('footer.php');?>
-</div> 
+    <?php include_once ('footer.php'); ?>
+</div>
