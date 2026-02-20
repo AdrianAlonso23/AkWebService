@@ -27,4 +27,4 @@ fetch("https://akwebservice.bernat26.es/?rest_route=/wp/v2/posts")
 </script>
 <div>
     <?php include_once ('footer.php');?>
-</div>
+</div> 
