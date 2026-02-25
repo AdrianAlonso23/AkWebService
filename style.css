@@ -21,72 +21,8 @@ body {
 #smooth-wrapper {
   top: 50px !important; 
 }
-/***** nav****/
-header {
-  border-bottom: 2px solid grey;
-  background-color: var(--dark);
-}
-
-nav{
-  display: flex;
-  align-items: center;
-  padding: 12px;
-
-}
-.logo a:hover{
-  color: violet;
-  text-decoration: none;
-}
-.menu-nav li a:hover{
-  color: violet;
-  text-decoration: none;
-}
-/*
-header {
-  border-bottom: 2px solid grey;
-  position: fixed;
-  background-color: var(--dark);
-}
-
-nav{
-  display: flex;
-  align-items: center;
-  padding: 12px; 
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}*/
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--light);
-  flex-basis: 80%;
-}
- 
-.hero {
-  min-height: 100vh;
-}
 
 
-nav {
-  margin-left: auto;
-}
-
-.ul-menu{
-  display: flex;
-  list-style: none;
-  font-weight: bold;
-}
-
-.li-menu + li{
-  padding-left: 1rem;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
 /***Primer section***/
 h1 {
   position: relative;
@@ -114,20 +50,20 @@ h1 {
 .clamp {
   position: relative;
   z-index: -1;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Britannic Bold';
 }
 
 .yt {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Britannic Bold';
   z-index: 3;
 }
+
 .p-yt {
   justify-content: center;
   text-align: center;
   z-index: 3;
   font-weight: none;
 }
-
 
 .heading {
   position: relative;
@@ -140,6 +76,7 @@ h1 {
 .images {
   z-index: -1
 }
+
 
 
 /******* Segundo Section ****/
@@ -163,7 +100,10 @@ h1 {
   text-shadow: 0 0 10px #9c2bff;
   font-size: 4rem;
   text-align: center;
+  font-family: 'Britannic Bold';
 }
+
+
 
 /* ===== Animación 2: tarjetas (scale-in) ===== */
 .anim-section {
@@ -177,11 +117,13 @@ h1 {
   justify-items: center;
 }
 
+
+
 /* Estado inicial para que GSAP anime desde aquí */
 .card, .anim-scale {
   background: #0b0b0d;
   width: 100%;
-  max-width: 350px;
+  max-width: 250px  ;
   padding: 80px;
   border-radius: 20px;
   border: 1px solid #6f2bff;
@@ -208,10 +150,14 @@ h1 {
   transform: scale(1.05);
   box-shadow: 0 0 20px #a56fff;
 }
+
+
 /* pequeño hover para feedback (opcional) */
 .card:hover {
   box-shadow: 0 14px 40px rgba(125, 60, 255, 0.18);
 }
+
+
 
 /* Responsive: reduce padding en móviles */
 @media (max-width: 480px) {
@@ -229,11 +175,14 @@ h1 {
   font-size: 1.2rem;
 }
 
+
+
 /****Tercer Section***/
 .div-informacion {
     margin-top: 100px;
-    background-color: #0a0a0a;
-    /* height: 220PX; */
+    background-image: url(img/FondoPuntos.png);
+    background-size: cover;
+    background-position: 30% 60%;
     text-align: center;
     padding: 80px;
 }
@@ -307,6 +256,8 @@ h1 {
     font-weight: 500;
     margin-top: 8px;
 }
+
+
 
 /****** Servicios ****/
 h2 {
@@ -387,125 +338,14 @@ h2 {
   box-shadow: 0 0 20px #a56fff;
 }
 
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .servicio-card {
     width: 85%;
   }
 }
-/****** Contacto*****/
 
-/* --- Layout principal --- */
-.contact-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 5%;
-}
-
-.d-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    align-self: flex-start;
-}
-
-.intro-text {
-    width: 80%;
-    text-align: left;
-    font-size: 18px;
-    opacity: 0.8;
-}
-
-form > div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    align-items: center;
-    margin-top: 30px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 14px;
-    background: #0c0c0f;
-    border: 2px solid #6f2bff;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
-    resize: none;
-}
-
-input:focus, textarea:focus {
-    box-shadow: 0 0 12px #a56fff;
-    border-color: #a56fff;
-}
-
-.boton-contacto {
-    width: 50%;
-    padding: 14px;
-    background: linear-gradient(90deg, #a56fff, #6f2bff);
-    border: none;
-    border-radius: 12px;
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.boton-contacto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #a56fff;
-}
-
-.d-contacto {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-}
-
-.card-contacto {
-    background: #0b0b0d;
-    padding: 40px;
-    width: 60%;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid #6f2bff;
-    box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
-    transition: 0.3s;
-}
-
-.card-contacto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 35px rgba(162, 93, 255, 0.6);
-}
-
-.card-contacto h6 {
-    font-size: 22px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.card-contacto p {
-    font-size: 16px;
-    opacity: 0.8;
-}
 
 /******Footer******/
 footer {
@@ -526,7 +366,6 @@ footer > div:first-child {
 }
 
 footer img {
-  border-radius: 20px;
   margin-bottom: 20px;
   width: 180px;
 }

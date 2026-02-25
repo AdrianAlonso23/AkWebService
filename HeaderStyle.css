@@ -1,0 +1,55 @@
+header {
+  border-bottom: 2px solid grey;
+  background-color: var(--dark);
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  padding: 12px;
+
+}
+nav img{
+  width: 120px;
+}
+.logo a:hover{
+  color: violet;
+  text-decoration: none;
+}
+.menu-nav li a:hover{
+  color: violet;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--light);
+  flex-basis: 80%;
+}
+ 
+.hero {
+  min-height: 100vh;
+}
+
+
+nav {
+  margin-left: auto;
+}
+
+.ul-menu{
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
+.li-menu + li{
+  padding-left: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
