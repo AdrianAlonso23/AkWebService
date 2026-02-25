@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="headerStyle.css">
 <header>
   <nav>
     <div class="logo">
