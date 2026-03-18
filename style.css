@@ -545,7 +545,7 @@ input:focus, textarea:focus {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #0073e6;
+  background: linear-gradient(90deg,#AF56DB,#22ADED);
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -555,98 +555,162 @@ input:focus, textarea:focus {
 .post-card-btn:hover {
   background-color: #005bb5;
 } 
-/******COntenido blog******/
+/****** POST INDIVIDUAL ******/
 
-.content-area {
-    max-width: 900px;
-    margin: 0 auto;
+.post-single {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 45px;
+  background: #0b0b0d;
+  border-radius: 16px;
+  border: 1px solid #6f2bff;
+  box-shadow: 0 0 30px rgba(162, 93, 255, 0.25);
 }
 
-.entry-header {
-    margin-bottom: 20px; 
+/* TITULO */
+
+.post-single h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  text-align: left;
+  text-transform: none;
+  line-height: 1.2;
+  text-shadow: 0 0 12px #6f2bff;
 }
 
-.entry-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+/* META INFO */
 
 .entry-meta {
-    color: gray;
-    font-size: 0.9rem;
-    margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 10px;
 }
 
-.entry-content p {
-    line-height: 1.8;
-    margin-bottom: 20px;
+/* CONTENIDO */
+
+.post-content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #e6e6e6;
 }
 
-/******Footer******/
-footer {
-  background: #0a0a0a;
-  color: #ffffff;
-  padding: 50px 0;
-  font-family: "Poppins", sans-serif;
-}
-footer > div:first-child {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding: 0 20px;
+/* PARRAFOS */
+
+.post-content p {
+  margin-bottom: 22px;
 }
 
-footer img {
-  margin-bottom: 20px;
-  width: 180px;
-}
+/* SUBTITULOS */
 
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer ul li:first-child {
-  font-weight: 700;
-  font-size: 17px;
+.post-content h2 {
+  margin-top: 45px;
   margin-bottom: 15px;
-  color: #9c5bff; /* color lila tecnológico */
+  font-size: 1.9rem;
+  text-align: left;
+  text-shadow: 0 0 8px #6f2bff;
 }
 
-footer ul li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  gap: 10px;
-  font-size: 15px;
+.post-content h3 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 
-footer ul li svg {
-  width: 22px;
-  height: 22px;
+/* LISTAS */
+
+.post-content ul,
+.post-content ol {
+  margin-left: 25px;
+  margin-bottom: 25px;
 }
 
-footer > div:last-child {
-  max-width: 1200px;
-  margin: 30px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid #444;
-  color: #cccccc;
-  font-size: 14px;
-  display: flex;
-  gap: 40px;
-
+.post-content li {
+  margin-bottom: 10px;
 }
 
-footer > div:last-child p:hover {
+/* ENLACES */
+
+.post-content a {
   color: #9c5bff;
+  font-weight: 500;
+  text-decoration: none;
 }
-footer svg {
-  fill: #ffffff;
-  stroke: #ffffff;
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+/* IMAGENES */
+
+.post-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 30px 0;
+  box-shadow: 0 0 20px rgba(162,93,255,0.3);
+}
+
+/* BLOQUES DE CODIGO */
+
+.post-content pre {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 30px 0;
+  border-left: 4px solid #AF56DB;
+}
+
+.post-content code {
+  color: #9c5bff;
+  font-family: monospace;
+}
+
+/* CITA */
+
+.post-content blockquote {
+  border-left: 4px solid #AF56DB;
+  padding-left: 20px;
+  margin: 30px 0;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* BOTON VOLVER */
+
+.back-blog {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg,#AF56DB,#22ADED);
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-blog:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #AF56DB;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+.post-single{
+  margin:40px 20px;
+  padding:30px;
+}
+
+.post-single h1{
+  font-size:2rem;
+}
+
+.post-content{
+  font-size:1.05rem;
+}
+
 }
