@@ -17,7 +17,7 @@ document.querySelectorAll("form").forEach(form => {
             total = document.querySelector("#total").textContent;
         }
 
-        fetch("https://tusitio.com/wp-json/ak/v1/solicitud", {
+        fetch("https://akwebservice.bernat26.es.com/wp-json/ak/v1/solicitud", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
