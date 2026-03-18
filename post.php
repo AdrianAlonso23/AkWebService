@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css">
+
 <div>
     <?php include_once('header.php'); ?>
 </div>
@@ -21,25 +23,24 @@ if(!$post) {
     exit;
 }
 ?>
- 
-<article id="post-<?php echo $post->id; ?>" 
-         class="post type-post status-publish hentry">
 
-    <header class="entry-header">
-        <h1 class="entry-title">
-            <?php echo $post->title->rendered; ?>
-        </h1>
+<article class="post-single">
 
-        <div class="entry-meta">
-            <span class="posted-on">
-                Publicado el <?php echo date("d/m/Y", strtotime($post->date)); ?>
-            </span>
-        </div>
-    </header>
+<header class="entry-header">
+<h1 class="entry-title">
+<?php echo $post->title->rendered; ?>
+</h1>
 
-    <div class="entry-content">
-        <?php echo $post->content->rendered; ?>
-    </div>
+<div class="entry-meta">
+Publicado el <?php echo date("d/m/Y", strtotime($post->date)); ?>
+</div>
+</header>
+
+<div class="post-content">
+<?php echo $post->content->rendered; ?>
+</div>
+
+<a class="back-blog" href="blog.php">← Volver al blog</a>
 
 </article>
 
