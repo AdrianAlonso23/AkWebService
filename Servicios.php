@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .servicio-icon{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </head>
 <body>
-  <?php include_once('header.php'); ?>
+  <?php include_once('header.php'); ?>¡
   <section class="tittle-contact">
     <h2>SERVICIOS</h2>
   </section>
 
   <div class="servicios-container">
     <div class="servicio-card">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M9.29289 1.29289C9.48043 1.10536 9.73478 1 10 1H18C19.6569 1 21 2.34315 21 4V9C21 9.55228 20.5523 10 20 10C19.4477 10 19 9.55228 19 9V4C19 3.44772 18.5523 3 18 3H11V8C11 8.55228 10.5523 9 10 9H5V20C5 20.5523 5.44772 21 6 21H9C9.55228 21 10 21.4477 10 22C10 22.5523 9.55228 23 9 23H6C4.34315 23 3 21.6569 3 20V8C3 7.73478 3.10536 7.48043 3.29289 7.29289L9.29289 1.29289ZM6.41421 7H9V4.41421L6.41421 7ZM18.7071 12.2929L22.7071 16.2929C23.0976 16.6834 23.0976 17.3166 22.7071 17.7071L18.7071 21.7071C18.3166 22.0976 17.6834 22.0976 17.2929 21.7071C16.9024 21.3166 16.9024 20.6834 17.2929 20.2929L20.5858 17L17.2929 13.7071C16.9024 13.3166 16.9024 12.6834 17.2929 12.2929C17.6834 11.9024 18.3166 11.9024 18.7071 12.2929ZM14.7071 13.7071C15.0976 13.3166 15.0976 12.6834 14.7071 12.2929C14.3166 11.9024 13.6834 11.9024 13.2929 12.2929L9.29289 16.2929C8.90237 16.6834 8.90237 17.3166 9.29289 17.7071L13.2929 21.7071C13.6834 22.0976 14.3166 22.0976 14.7071 21.7071C15.0976 21.3166 15.0976 20.6834 14.7071 20.2929L11.4142 17L14.7071 13.7071Z"
           fill="#C67FFF" />
       </svg>
+=======
+      <img class="servicio-icon" src="img/IconoPaginaWeb.svg" alt="">
+>>>>>>> main
       <h2 class="servicio-titulo">Titulooo</h2>
 =======
       <img class="servicio-icon" src="img/IconoPaginaWeb.svg" alt="">
@@ -33,6 +43,7 @@
     </div>
 
     <div class="servicio-card">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <svg fill="#c67fff" height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 464 464" xml:space="preserve">
         <g>
@@ -106,6 +117,9 @@
         </g>
         </g>
         </svg>
+=======
+     <img class="servicio-icon" src="img/IconoE-commerce.svg" alt="">
+>>>>>>> main
       <h2 class="servicio-titulo">Titulooo</h2>
 =======
      <img class="servicio-icon" src="img/IconoE-commerce.svg" alt="">
@@ -118,8 +132,12 @@
     </div>
 
     <div class="servicio-card">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <img src="maintenance-documents-svgrepo-com.svg" alt="" class="servicio-icon">
+=======
+      <img src="img/IconoMantenimiento.svg" alt="" class="servicio-icon">
+>>>>>>> main
       <h2 class="servicio-titulo">Titulooo</h2>
 =======
       <img src="img/IconoMantenimiento.svg" alt="" class="servicio-icon">

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="FooterStyle.css">
 </head>
 <body>
     <footer>
         <div>
-            <img class="imagen-logo" src="img/logo.png" alt="Logo">
+            <img class="imagen-logo" src="img/Logo AK_Web_Service_Vector_2.svg" alt="Logo">
             <ul>
                 <li>ATENCIÓN AL CLIENTE</li>
                 <li>
