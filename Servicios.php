@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-  <?php include_once('header.php'); ?>¡
+  <?php include_once('header.php'); ?>
   <section class="tittle-contact">
     <h2>SERVICIOS</h2>
   </section>
