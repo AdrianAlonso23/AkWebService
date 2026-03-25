@@ -329,7 +329,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin: 40px;
+  margin: 60px 40px;
   flex-wrap: wrap;
 }
 
@@ -343,6 +343,10 @@ h2 {
   box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
   text-align: center;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .servicio-card:hover {
@@ -368,18 +372,19 @@ h2 {
   opacity: 0.85;
   line-height: 1.6;
   margin-bottom: 25px;
+  text-align: center;
 }
-
 .servicio-btn {
-  background: linear-gradient(90deg, #a56fff, #6f2bff);
+  background: linear-gradient(90deg, #22ADED, #AF56DB);
   border: none;
   padding: 12px 25px;
   border-radius: 12px;
-  color: #000;
+  color: white;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
+  width: 80%;
 }
 
 .servicio-btn:hover {
