@@ -192,11 +192,14 @@
     <section class="tittle-formulario">
         <h2>SERVICIOS</h2>
     </section>
+    <form id="formWeb">
+
     <div class="container">
+
         <!-- MENÚ IZQUIERDO -->
         <div class="menu-padre">
             <div class="menu-hijo">
-                <H3>Menú</H3>
+                <h3>Menú</h3>
                 <ul>
                     <li><a href="#DivApartados">1. Apartados</a></li>
                     <li><a href="#DivTextos">2. Textos</a></li>
@@ -209,94 +212,96 @@
             </div>
         </div>
 
-        <!-- CONTENIDO PRINCIPAL -->
+        <!-- CONTENIDO -->
         <div class="content">
+
+            <h3>Datos de contacto</h3>
+
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" id="email" name="email" placeholder="Tu email" required>
+
             <h3>Formulario</h3>
-            <p class="textos">
-                A través de este formulario podrás configurar los servicios necesarios para el desarrollo de tu página web profesional. 
-                Selecciona las funcionalidades que deseas incluir y obtén un presupuesto estimado en tiempo real. 
-                Cada opción ha sido diseñada para mejorar la presencia digital, el posicionamiento y el rendimiento de tu proyecto online.
-            </p>
+
+            <!-- APARTADOS -->
             <div id="DivApartados" class="service-block">
                 <h3>1. Apartados (200€ / cada uno)</h3>
-                <p class="textos"> Define el número de secciones principales que tendrá tu página web 
-                    (Inicio, Servicios, Sobre nosotros, Contacto, etc.). 
-                    Cada apartado incluye diseño personalizado y maquetación profesional.
-                </p>
                 <div class="numbers" id="apartados"></div>
             </div>
 
+            <!-- TEXTOS -->
             <div id="DivTextos" class="service-block">
-                <h3>2. Textos de calidad</h3>
-                <p class="textos"> Creación de contenido optimizado entre 500 y 1000 palabras por sección. 
-                    Textos persuasivos, estructurados y adaptados a tu sector para mejorar 
-                    la conversión y la imagen de marca. Precio fijo: 60€.
-                </p>
+                <h3>2. Textos</h3>
                 <div class="numbers">
-                    <button id="textosSi">Sí</button>
-                    <button id="textosNo">No</button>
+                    <button type="button" id="textosSi">Sí</button>
+                    <button type="button" id="textosNo">No</button>
                 </div>
             </div>
+
+            <!-- SEO -->
             <div id="DivSeo" class="service-block">
-                <h3>3. Posicionamiento en Google</h3>
-                <p class="textos">Optimización avanzada para mejorar tu visibilidad en buscadores. 
-                    Incluye estudio de palabras clave, optimización técnica y estructura 
-                    estratégica del contenido. Precio fijo: 699€.</p>
+                <h3>3. SEO</h3>
                 <div class="numbers">
-                    <button id="SEOsSi">Sí</button>
-                    <button id="SEOsNo">No</button>
+                    <button type="button" id="SEOsSi">Sí</button>
+                    <button type="button" id="SEOsNo">No</button>
                 </div>
             </div>
+
+            <!-- IDIOMAS -->
             <div id="DivIdiomas" class="service-block">
-                <h3>4. Idiomas adicionales</h3>
-                <p class="textos">Amplía tu alcance internacional incorporando versiones en otros idiomas. 
-                    Cada idioma extra incluye adaptación completa del contenido y estructura. 
-                    Coste: 200€ por idioma.</p>
+                <h3>4. Idiomas</h3>
                 <div class="numbers" id="apartadosIdiomas"></div>
             </div>
+
+            <!-- BLOG -->
             <div id="DivBlog" class="service-block">
-                <h3>5. Blog o apartado de noticiase</h3>
-                <p class="textos">Implementación de un sistema de blog profesional para publicar artículos, 
-                    novedades y contenido estratégico que refuerce tu posicionamiento online. 
-                    Precio fijo: 199€.</p>
+                <h3>5. Blog</h3>
                 <div class="numbers">
-                    <button id="BlogSi">Sí</button>
-                    <button id="BlogNo">No</button>
+                    <button type="button" id="BlogSi">Sí</button>
+                    <button type="button" id="BlogNo">No</button>
                 </div>
             </div>
 
+            <!-- IMÁGENES -->
             <div id="DivImagenes" class="service-block">
-                <h3>6. Imágenes profesionales</h3>
-                <p class="textos"> Selección y optimización de imágenes de alta calidad adaptadas a tu marca 
-                    y sector. Incluye tratamiento visual y optimización para carga rápida. 
-                    Precio fijo: 300€.</p>
+                <h3>6. Imágenes</h3>
                 <div class="numbers">
-                    <button id="ImagenesSi">Sí</button>
-                    <button id="ImagenesNo">No</button>
+                    <button type="button" id="ImagenesSi">Sí</button>
+                    <button type="button" id="ImagenesNo">No</button>
                 </div>
             </div>
+
+            <!-- BD -->
             <div id="DivBD" class="service-block">
-                <h3>7. Importación de base de datos web</h3>
-                <p class="textos">Migración e integración de bases de datos existentes en tu nueva web. 
-                    Incluye configuración técnica y pruebas de funcionamiento. 
-                    Precio fijo: 200€.</p>
+                <h3>7. Base de datos</h3>
                 <div class="numbers">
-                    <button id="BDSi">Sí</button>
-                    <button id="BDNo">No</button>
+                    <button type="button" id="BDSi">Sí</button>
+                    <button type="button" id="BDNo">No</button>
                 </div>
+            </div>
+
+        </div>
+
+        <!-- RESUMEN -->
+        <div class="menu-padre-derecha">
+            <div class="summary">
+
+                <h3>Resumen</h3>
+
+                <p>Total:</p>
+                <p class="total">
+                    <span id="total">0</span>€
+                </p>
+
+                <button type="button" class="btn-enviar">
+                    ENVIAR SOLICITUD
+                </button>
+
             </div>
         </div>
 
-        <!-- RESUMEN DERECHA -->
-        <div class="menu-padre-derecha">
-            <div class="summary"> 
-                <h3>Precio</h3>
-                <p>Servicios seleccionados:</p>
-                <p class="total">Total: <span id="total">0</span>€</p>
-                <button class="btn-enviar">ENVIAR SOLICITUD</button>
-            </div>
-        </div>
     </div>
+
+</form>
 
     <script>
         const numContainer = document.getElementById('apartados');
