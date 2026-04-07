@@ -5,39 +5,47 @@
 * {
   margin: 0;
 }
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background: #000;
   color: #fff;
 }
+
 :root {
   --f-5-min: 30;
   --f-5-max: 120;
   --step-5: calc(((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) * var(--fluid-bp));
 }
+
 #smooth-wrapper {
-  top: 50px !important; 
+  top: 50px !important;
 }
+
 /***** nav****/
 header {
   border-bottom: 2px solid grey;
   background-color: var(--dark);
 }
-nav{
+
+nav {
   display: flex;
   align-items: center;
   padding: 12px;
 
 }
-.logo a:hover{
+
+.logo a:hover {
   color: violet;
   text-decoration: none;
 }
-.menu-nav li a:hover{
+
+.menu-nav li a:hover {
   color: violet;
   text-decoration: none;
 }
+
 /*
 header {
   border-bottom: 2px solid grey;
@@ -111,7 +119,7 @@ h1 {
 .heading {
   position: relative;
   z-index: 2;
-  mix-blend-mode:color-dodge;
+  mix-blend-mode: color-dodge;
   perspective: 1000px;
   transform: rotate(0.1deg);
 }
@@ -123,18 +131,18 @@ h1 {
 
 
 /******* Segundo Section ****/
-.articulos-servicios{
+.articulos-servicios {
   display: flex;
   gap: 150px;
   justify-content: center;
 }
 
-.borde-titulo{
+.borde-titulo {
   display: flex;
   justify-content: center;
 }
 
-.borde-titulo h2{
+.borde-titulo h2 {
   color: #fff;
   border: rgb(175, 87, 175);
   border-bottom: 5px solid rgb(175, 87, 175);
@@ -163,10 +171,11 @@ h1 {
 
 
 /* Estado inicial para que GSAP anime desde aquí */
-.card, .anim-scale {
+.card,
+.anim-scale {
   background: #0b0b0d;
   width: 100%;
-  max-width: 250px  ;
+  max-width: 250px;
   padding: 80px;
   border-radius: 20px;
   border: 1px solid #6f2bff;
@@ -174,22 +183,25 @@ h1 {
   text-align: center;
   transition: 0.3s;
   will-change: transform, opacity;
-  opacity: 0;                
+  opacity: 0;
   transform: scale(0.8);
   transition: box-shadow .2s ease;
 }
-.boton-servicios{
-  background: linear-gradient(90deg, #a56fff, #6f2bff);
+
+.boton-servicios {
+  background: linear-gradient(90deg, #22ADED, #AF56DB);
   border: none;
   padding: 12px 25px;
   border-radius: 12px;
-  color: #000;
+  color: white;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
+
 }
-.boton-servicios:hover{
+
+.boton-servicios:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #a56fff;
 }
@@ -208,13 +220,14 @@ h1 {
     padding: 20px;
     font-size: 16px;
   }
+
   .anim-section {
     padding: 40px 12px;
     gap: 20px;
   }
 }
 
-.texto-servicios{
+.texto-servicios {
   font-size: 1.2rem;
 }
 
@@ -222,34 +235,37 @@ h1 {
 
 /****Tercer Section***/
 .div-informacion {
-    margin-top: 100px;
-    background-image: url(img/FondoPuntos.png);
-    background-size: cover;
-    background-position: 30% 60%;
-    text-align: center;
-    padding: 80px;
+  margin-top: 100px;
+  background-image: url(img/FondoPuntos.png);
+  background-size: cover;
+  background-position: 30% 60%;
+  text-align: center;
+  padding: 80px;
 }
-.counter{
+
+.counter {
   margin-top: 150px;
   display: flex;
   justify-content: center;
   margin-bottom: 150px;
 }
-.counter .row > div {
+
+.counter .row>div {
   background: #0a0a0a;
   padding: 50px;
   border-radius: 15px;
   box-shadow: 0 10px 35px rgba(253, 68, 207, 0.1);
   text-align: center;
-  border:violet;
+  border: violet;
   transition: transform .3s ease, box-shadow .3s ease;
   width: 200px;
 }
 
-.counter .row > div:hover {
+.counter .row>div:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 35px rgba(253, 68, 207,0.3);
+  box-shadow: 0 10px 35px rgba(253, 68, 207, 0.3);
 }
+
 .counter .row {
   display: flex;
   flex-wrap: wrap;
@@ -259,7 +275,7 @@ h1 {
 .img-block img {
   width: 70px;
   margin-bottom: 10px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .counter-block {
@@ -294,10 +310,10 @@ h1 {
 }
 
 .quote-title {
-    font-size: 15px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 8px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 8px;
 }
 
 
@@ -358,6 +374,8 @@ h2 {
   font-size: 28px;
   margin-bottom: 15px;
   color: #cda6ff;
+    text-shadow: 0 0 10px #6f2bff;
+
 }
 
 
@@ -368,6 +386,7 @@ h2 {
   margin-bottom: 25px;
   text-align: center;
 }
+
 .servicio-btn {
   background: linear-gradient(90deg, #22ADED, #AF56DB);
   border: none;
@@ -396,115 +415,118 @@ h2 {
 
 /* --- Layout principal --- */
 .contact-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 5%;
 }
 
 .d-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form label {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .intro-text {
-    width: 80%;
-    text-align: left;
-    font-size: 18px;
-    opacity: 0.8;
+  width: 80%;
+  text-align: left;
+  font-size: 18px;
+  opacity: 0.8;
 }
 
-form > div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+form>div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 form {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    align-items: center;
-    margin-top: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  margin-top: 30px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 14px;
-    background: #0c0c0f;
-    border: 2px solid #6f2bff;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
-    resize: none;
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  background: #0c0c0f;
+  border: 2px solid #6f2bff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  resize: none;
 }
 
-input:focus, textarea:focus {
-    box-shadow: 0 0 12px #a56fff;
-    border-color: #a56fff;
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 12px #a56fff;
+  border-color: #a56fff;
 }
 
 .boton-contacto {
-    width: 50%;
-    padding: 14px;
-    background: linear-gradient(90deg, #a56fff, #6f2bff);
-    border: none;
-    border-radius: 12px;
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 50%;
+  padding: 14px;
+  background: linear-gradient(90deg, #a56fff, #6f2bff);
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .boton-contacto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #a56fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a56fff;
 }
 
 .d-contacto {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
 }
 
 .card-contacto {
-    background: #0b0b0d;
-    padding: 40px;
-    width: 60%;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid #6f2bff;
-    box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
-    transition: 0.3s;
+  background: #0b0b0d;
+  padding: 40px;
+  width: 60%;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #6f2bff;
+  box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
+  transition: 0.3s;
 }
 
 .card-contacto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 35px rgba(162, 93, 255, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(162, 93, 255, 0.6);
 }
 
 .card-contacto h6 {
-    font-size: 22px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .card-contacto p {
-    font-size: 16px;
-    opacity: 0.8;
+  font-size: 16px;
+  opacity: 0.8;
 }
+
 /****** Blog *****/
 /* Contenedor principal de posts */
 #posts {
@@ -521,13 +543,13 @@ input:focus, textarea:focus {
   background-color: #0b0b0d;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #posts article:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Títulos con enlace */
@@ -541,7 +563,7 @@ input:focus, textarea:focus {
 #posts .post-content {
   margin-top: 10px;
   line-height: 1.6;
-  max-height: 150px; 
+  max-height: 150px;
   overflow: hidden;
 }
 
@@ -550,7 +572,7 @@ input:focus, textarea:focus {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 15px;
-  background: linear-gradient(90deg,#AF56DB,#22ADED);
+  background: linear-gradient(90deg, #AF56DB, #22ADED);
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -559,7 +581,8 @@ input:focus, textarea:focus {
 
 .post-card-btn:hover {
   background-color: #005bb5;
-} 
+}
+
 /****** POST INDIVIDUAL ******/
 
 .post-single {
@@ -653,7 +676,7 @@ input:focus, textarea:focus {
   width: 100%;
   border-radius: 12px;
   margin: 30px 0;
-  box-shadow: 0 0 20px rgba(162,93,255,0.3);
+  box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
 }
 
 /* BLOQUES DE CODIGO */
@@ -688,7 +711,7 @@ input:focus, textarea:focus {
   display: inline-block;
   margin-top: 50px;
   padding: 12px 24px;
-  background: linear-gradient(90deg,#AF56DB,#22ADED);
+  background: linear-gradient(90deg, #AF56DB, #22ADED);
   border-radius: 8px;
   color: #000;
   font-weight: bold;
@@ -705,17 +728,17 @@ input:focus, textarea:focus {
 
 @media (max-width: 768px) {
 
-.post-single{
-  margin:40px 20px;
-  padding:30px;
-}
+  .post-single {
+    margin: 40px 20px;
+    padding: 30px;
+  }
 
-.post-single h1{
-  font-size:2rem;
-}
+  .post-single h1 {
+    font-size: 2rem;
+  }
 
-.post-content{
-  font-size:1.05rem;
-}
+  .post-content {
+    font-size: 1.05rem;
+  }
 
 }

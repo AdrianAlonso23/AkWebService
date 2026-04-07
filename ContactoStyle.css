@@ -87,10 +87,10 @@ input:focus, textarea:focus {
 button {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(90deg, #a56fff, #6f2bff);
+  background: linear-gradient(90deg, #22ADED, #AF56DB);
     border: none;
     border-radius: 12px;
-    color: #000;
+    color: white;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
