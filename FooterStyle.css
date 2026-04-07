@@ -2,7 +2,7 @@ footer {
   background: #0a0a0a;
   color: #ffffff;
   padding: 50px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 footer > div:first-child {
   max-width: 1200px;
