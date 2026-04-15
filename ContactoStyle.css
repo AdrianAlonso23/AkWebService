@@ -1,0 +1,138 @@
+/* --- Estilo general oscuro tipo "AK WebServices" --- */
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #6f2bff;
+}
+
+.tittle-contact {
+    height: 230px;
+    background-image: url(img/backgraund.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Layout principal --- */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 5%;
+}
+
+/* --- Formulario --- */
+.d-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    align-self: flex-start;
+}
+
+.intro-text {
+    width: 80%;
+    text-align: left;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Inputs estilo futurista */
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+input, textarea {
+    padding: 14px;
+    background: #0c0c0f;
+    border: 2px solid #6f2bff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 12px #a56fff;
+    border-color: #a56fff;
+}
+
+/* Botón moderno */
+button {
+    width: 100%;
+    padding: 14px;
+  background: linear-gradient(90deg, #22ADED, #AF56DB);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #a56fff;
+}
+
+/* --- Tarjetas de contacto --- */
+.d-contacto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.card {
+    background: #0b0b0d;
+    padding: 40px;
+    width: 60%;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);   
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(162, 93, 255, 0.6);
+}
+
+.card h6 {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    opacity: 0.8;
+}
