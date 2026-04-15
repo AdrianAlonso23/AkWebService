@@ -2,7 +2,7 @@
 <header>
   <nav>
     <div class="logo">
-      <img src="img/Logo AK_Web_Service_Vector_2.svg" alt="Logo de AK Web Services">
+      <img src="img/Logo AK_Web_Service_Vector_header.svg" alt="Logo de AK Web Services">
     </div>
     <div class="menu-nav">
       <ul class="ul-menu">
