@@ -52,7 +52,7 @@
                 Desarrollamos páginas web a medida en código, rápidas, seguras y totalmente personalizadas para destacar y crecer online.
             </p>
             <br>
-            <a class="servicio-btn" href="formularioPagina.html">Más información</a>
+            <a class="servicio-btn" href="formularioPagina.php">Más información</a>
             </div>
 
             <div class="servicio-card">
@@ -113,7 +113,7 @@
                 <p class="servicio-texto">
                     Creamos tiendas online rápidas, seguras y optimizadas para vender, con una experiencia de compra sencilla y adaptada a todos los dispositivos.
                 </p>
-                <a class="servicio-btn" href="formularioTienda.html">Más información</a>
+                <a class="servicio-btn" href="formularioTienda.php">Más información</a>
             </div>
 
             <div class="servicio-card">
@@ -140,7 +140,7 @@
                 <p class="servicio-texto">
                     Mantenemos tu web actualizada, segura y optimizada para que funcione rápido y sin problemas, mejorando la experiencia del usuario y tu posicionamiento online.
                 </p>
-                <a class="servicio-btn" href="formularioMantenimiento.html">Más información</a>
+                <a class="servicio-btn" href="formularioMantenimiento.php">Más información</a>
             </div>
         </div>
     <?php include('footer.php');?>

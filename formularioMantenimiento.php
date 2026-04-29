@@ -144,10 +144,7 @@
             border-radius: 15px;
             border: 1px solid #6f2bff;
             box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
-
             position: fixed;
-            top: 300px;
-
             left: 50%;
             transform: translateX(325px);
         }
@@ -178,7 +175,7 @@
             transform: scale(1.05);
             box-shadow: 0 0 18px #a56fff;
         }
-          .textos{
+        .textos{
             margin-top: 10px;
             margin-bottom: 18px;
             color: #b98cff;
@@ -189,13 +186,28 @@
             border-left: 3px solid #6f2bff;
             border-radius: 8px;
         }
+        input {
+            padding: 10px;
+            background: #0c0c0f;
+            border: 2px solid #6f2bff;
+            border-radius: 10px;
+            color: #fff;
+            font-size:0.8rem;
+            outline: none;
+            transition: 0.3s;
+            resize: none;
+        }
+        input:focus{
+            box-shadow: 0 0 12px #a56fff;
+            border-color: #a56fff;
+        }
     </style>
 </head>
 
 <body>
-    <section class="tittle-formulario">
-        <h2>SERVICIOS</h2>
-    </section>
+    <div>
+        <?php include_once ('header.php');?>
+    </div>
     <form id="formMantenimiento">
         <div class="container">
             <!-- MENÚ IZQUIERDO -->
@@ -210,6 +222,10 @@
                 </div>
             </div>
             <div class="content">
+                <h3>Datos de contacto</h3>
+
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
             <h3>Formulario</h3>
                 <p class="textos">
                     Mantén tu página web siempre actualizada, segura y optimizada con nuestros planes de mantenimiento mensual. 
@@ -251,7 +267,9 @@
                 <div class="summary">
                 <h3>Precio</h3>
                 <p class="total">Total: <span id="total">0</span>€</p>
-                <button type="button" class="btn-enviar">ENVIAR SOLICITUD</button>
+                <button type="button" class="btn-enviar">
+                    ENVIAR SOLICITUD
+                </button>
             </div>
         </div>
     </form>
