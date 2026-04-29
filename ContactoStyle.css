@@ -1,4 +1,3 @@
-/* --- Estilo general oscuro tipo "AK WebServices" --- */
 
 body {
     background: #000;
@@ -22,14 +21,12 @@ h2 {
     justify-content: center;
 }
 
-/* --- Layout principal --- */
 .contact-section {
     display: flex;
     justify-content: space-between;
     padding: 60px 5%;
 }
 
-/* --- Formulario --- */
 .d-form {
     width: 50%;
     display: flex;
@@ -66,7 +63,6 @@ form {
 }
 
 input, textarea {
-    width: 100%;
     padding: 14px;
     background: #0c0c0f;
     border: 2px solid #6f2bff;

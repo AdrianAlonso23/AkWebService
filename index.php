@@ -84,7 +84,7 @@
                 </g>
             </svg>
             <p class="servicio-titulo">Desarrollo de páginas web personalizadas en código</p>
-            <button class="boton-servicios"><a href="Servicios.php">Mas Informacion</a></button>
+            <button class="boton-servicios"><a href="Servicios.php">MÁS INFORMACIÓN</a></button>
           </div>
           <div class="card anim-scale">
             <svg width="150px" height="150px" viewBox="0 0 296 218" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -140,7 +140,7 @@
                     </defs>
                 </svg>
             <p class="servicio-titulo">Creación de tiendas online (e-commerce)</p>
-            <button class="boton-servicios"><a href="Servicios.php">Mas Informacion</a></button>
+            <button class="boton-servicios"><a href="Servicios.php">MÁS INFORMACIÓN</a></button>
           </div>
           <div class="card anim-scale">
             <svg width="150px" height="150px" viewBox="0 0 295 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
@@ -163,7 +163,7 @@
                     </g>
                 </svg>
             <p class="servicio-titulo">Mantenimiento web y actualizaciones / optimización de rendimiento</p>
-            <button class="boton-servicios"><a href="Servicios.php">Mas Informacion</a></button>
+            <button class="boton-servicios"><a href="Servicios.php">MÁS INFORMACIÓN</a></button>
           </div>
         </div>
       </section>

@@ -10,7 +10,7 @@ nav{
 
 }
 nav img{
-  width: 120px;
+  width: 90px;
 }
 .logo a:hover{
   color: violet;
@@ -51,5 +51,3 @@ a {
   color: white;
   text-decoration: none;
 }
-
-
