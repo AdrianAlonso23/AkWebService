@@ -8,6 +8,7 @@
       <ul class="ul-menu">
         <li class="li-menu"><a href="index.php">Inicio</a></li>
         <li class="li-menu"><a href="Servicios.php">Servicios</a></li>
+        <li class="li-menu"><a href="Proyectos.php">Proyectos</a></li>
         <li class="li-menu"><a href="Contacto.php">Contacto</a></li>
         <li class="li-menu"><a href="Blog.php">Blog</a></li>
       </ul>
