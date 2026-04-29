@@ -130,10 +130,7 @@
             border-radius: 15px;
             border: 1px solid #6f2bff;
             box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
-
             position: fixed;
-            top: 300px;
-
             left: 50%;
             transform: translateX(325px);
         }
@@ -195,112 +192,138 @@
         .numbers button:hover::before {
             opacity: 1;
         }
+        input {
+            padding: 10px;
+            background: #0c0c0f;
+            border: 2px solid #6f2bff;
+            border-radius: 10px;
+            color: #fff;
+            font-size:0.8rem;
+            outline: none;
+            transition: 0.3s;
+            resize: none;
+        }
+        input:focus{
+            box-shadow: 0 0 12px #a56fff;
+            border-color: #a56fff;
+        }
     </style>
 </head>
 
 <body>
-
-    <section class="tittle-formulario">
-        <h2>SERVICIOS</h2>
-    </section>
-    <div class="container">
-        <!-- MENU -->
-        <div class="menu-padre">
-            <div class="menu-hijo">
-                <H3>Menú</H3>
-                <ul>
-                    <li><a href="#productos">1. Productos</a></li>
-                    <li><a href="#pagos">2. Pagos</a></li>
-                    <li><a href="#envios">3. Envíos</a></li>
-                    <li><a href="#cupones">4. Cupones</a></li>
-                    <li><a href="#clientes">5. Clientes</a></li>
-                    <li><a href="#seo">6. SEO</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- CONTENT --> 
-        <div class="content">
-            <h3>Formulario</h3>
-            <h5 class="textos">
-                Este formulario te permite configurar los servicios necesarios para tu tienda online o proyecto digital. 
-                Podrás seleccionar el sector de tu negocio, el número de productos, los métodos de pago, el sistema de envíos 
-                y diferentes funcionalidades extra. El presupuesto se calculará automáticamente en función de las opciones 
-                que elijas.    
-            </h5>
-            <div class="service-block">
-                <h3>1. Información básica</h3>
-                <div class="form-group">
-                    <select>
-                        <option selected disabled>Sector del negocio</option>
-                        <option>Moda</option>
-                        <option>Electrónica</option>
-                        <option>Alimentación</option>
-                        <option>Servicios</option>
-                        <option>Digital</option>
-                    </select>
-                </div>
-            </div>
-
-            <div id="productos" class="service-block">
-                <h3>2. Número de productos (5€ / producto)</h3>
-                <div class="numbers" id="productosNum"></div>
-            </div>
-
-            <div id="pagos" class="service-block">
-                <h3>3. Métodos de pago</h3>
-                <p class="textos">Incluimos por defecto pago con tarjeta y PayPal. Si necesitas métodos adicionales como Bizum o Transferencia bancaria, podrás añadirlos como extras por 40€ cada uno.</p>
-                <div class="numbers">
-                    <button id="pagoBizum">Bizum</button>
-                    <button id="pagoTransferencia">Transferencia</button>
-                </div>
-            </div>
-
-            <div id="envios" class="service-block">
-                <h3>4. Sistema de envíos (100€)</h3>
-                <p class="textos">
-                    El sistema de envíos incluye configuración completa con: precio fijo, envío gratuito, cálculo por zonas y opción de recogida en tienda. Todo adaptado a las necesidades de tu negocio.
-                </p>
-                <div class="numbers">
-                    <button id="envioSi">Sí</button>
-                    <button id="envioNo">No</button>
-                </div>
-            </div>
-            <div id="extras" class="service-block">
-                <h3>5. Extras </h3>
-                <p class="textos">
-                    Puedes añadir funcionalidades adicionales para mejorar el rendimiento 
-                    y la experiencia de tu tienda online. Cada extra tiene un coste de 50€ 
-                        y se integrará completamente en tu proyecto.
-                </p>                
-                <div class="numbers tooltip ">
-                    <button id="ExtraSEO" data-tooltip="Optimización SEO básica para mejorar visibilidad en Google">
-                        SEO
-                    </button>
-                    <button id="ExtraAreaClientes" data-tooltip="Área privada para clientes con historial de pedidos">
-                        Área de clientes
-                    </button>
-                    <button id="ExtraCupones" data-tooltip="Sistema de cupones y descuentos configurables">
-                        Cupones
-                    </button>
-
-                    <button id="ExtraEmailsAutomaticos"
-                        data-tooltip="Emails automáticos: pedidos, registro y notificaciones">
-                        Emails automáticos
-                    </button>
-                </div>
-            </div>
-        </div>
-
-         <!-- RESUMEN DERECHA -->
-         <div class="menu-padre-derecha">
-            <div class="summary">
-            <h3>Precio</h3>
-            <p>Servicios seleccionados:</p>
-            <p class="total">Total: <span id="total">0</span>€</p>
-            <button class="btn-enviar">ENVIAR SOLICITUD</button>
-        </div>
+    <div>
+        <?php include_once ('header.php');?>
     </div>
+    <form id="formEcommerce">
+        <div class="container">
+            <!-- MENU -->
+            <div class="menu-padre">
+                <div class="menu-hijo">
+                    <H3>Menú</H3>
+                    <ul>
+                        <li><a href="#productos">1. Productos</a></li>
+                        <li><a href="#pagos">2. Pagos</a></li>
+                        <li><a href="#envios">3. Envíos</a></li>
+                        <li><a href="#cupones">4. Cupones</a></li>
+                        <li><a href="#clientes">5. Clientes</a></li>
+                        <li><a href="#seo">6. SEO</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h3>Formulario</h3>
+                <h5 class="textos">
+                    Este formulario te permite configurar los servicios necesarios para tu tienda online o proyecto digital. 
+                    Podrás seleccionar el sector de tu negocio, el número de productos, los métodos de pago, el sistema de envíos 
+                    y diferentes funcionalidades extra. El presupuesto se calculará automáticamente en función de las opciones 
+                    que elijas.    
+                </h5>
+            </div>
+            <!-- CONTENT --> 
+            <div class="content">
+                <h3>Datos de contacto</h3>
+
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+
+                <div class="service-block">
+                    <h3>1. Información básica</h3>
+                    <div class="form-group">
+                        <select>
+                            <option selected disabled>Sector del negocio</option>
+                            <option>Moda</option>
+                            <option>Electrónica</option>
+                            <option>Alimentación</option>
+                            <option>Servicios</option>
+                            <option>Digital</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="productos" class="service-block">
+                    <h3>2. Número de productos (5€ / producto)</h3>
+                    <div class="numbers" id="productosNum"></div>
+                </div>
+
+                <div id="pagos" class="service-block">
+                    <h3>3. Métodos de pago</h3>
+                    <p class="textos">Incluimos por defecto pago con tarjeta y PayPal. Si necesitas métodos adicionales como Bizum o Transferencia bancaria, podrás añadirlos como extras por 40€ cada uno.</p>
+                    <div class="numbers">
+                        <button id="pagoBizum">Bizum</button>
+                        <button id="pagoTransferencia">Transferencia</button>
+                    </div>
+                </div>
+
+                <div id="envios" class="service-block">
+                    <h3>4. Sistema de envíos (100€)</h3>
+                    <p class="textos">
+                        El sistema de envíos incluye configuración completa con: precio fijo, envío gratuito, cálculo por zonas y opción de recogida en tienda. Todo adaptado a las necesidades de tu negocio.
+                    </p>
+                    <div class="numbers">
+                        <button id="envioSi">Sí</button>
+                        <button id="envioNo">No</button>
+                    </div>
+                </div>
+                <div id="extras" class="service-block">
+                    <h3>5. Extras </h3>
+                    <p class="textos">
+                        Puedes añadir funcionalidades adicionales para mejorar el rendimiento 
+                        y la experiencia de tu tienda online. Cada extra tiene un coste de 50€ 
+                            y se integrará completamente en tu proyecto.
+                    </p>                
+                    <div class="numbers tooltip ">
+                        <button id="ExtraSEO" data-tooltip="Optimización SEO básica para mejorar visibilidad en Google">
+                            SEO
+                        </button>
+                        <button id="ExtraAreaClientes" data-tooltip="Área privada para clientes con historial de pedidos">
+                            Área de clientes
+                        </button>
+                        <button id="ExtraCupones" data-tooltip="Sistema de cupones y descuentos configurables">
+                            Cupones
+                        </button>
+
+                        <button id="ExtraEmailsAutomaticos"
+                            data-tooltip="Emails automáticos: pedidos, registro y notificaciones">
+                            Emails automáticos
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESUMEN DERECHA -->
+            <div class="menu-padre-derecha">
+                <div class="summary">
+                <h3>Precio</h3>
+                <p>Servicios seleccionados:</p>
+                <p class="total">Total: <span id="total">0</span>€</p>
+                <button type="button" class="btn-enviar">
+                    ENVIAR SOLICITUD
+                </button>
+            </div>
+        </div>
+    </form>
 
 
     <script>

@@ -138,10 +138,7 @@
             border-radius: 15px;
             border: 1px solid #6f2bff;
             box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
-
             position: fixed;
-            top: 300px;
-
             left: 50%;
             transform: translateX(325px);
         }
@@ -173,7 +170,7 @@
             transform: scale(1.05);
             box-shadow: 0 0 18px #a56fff;
         }
-         .textos{
+        .textos{
             margin-top: 10px;
             margin-bottom: 18px;
             color: #b98cff;
@@ -184,124 +181,137 @@
             border-left: 3px solid #6f2bff;
             border-radius: 8px;
         }
+        input {
+            padding: 10px;
+            background: #0c0c0f;
+            border: 2px solid #6f2bff;
+            border-radius: 10px;
+            color: #fff;
+            font-size:0.8rem;
+            outline: none;
+            transition: 0.3s;
+            resize: none;
+        }
+        input:focus{
+            box-shadow: 0 0 12px #a56fff;
+            border-color: #a56fff;
+        }
     </style>
 </head>
 
 <body>
-
-    <section class="tittle-formulario">
-        <h2>SERVICIOS</h2>
-    </section>
-    <form id="formWeb">
-
-    <div class="container">
-
-        <!-- MENÚ IZQUIERDO -->
-        <div class="menu-padre">
-            <div class="menu-hijo">
-                <h3>Menú</h3>
-                <ul>
-                    <li><a href="#DivApartados">1. Apartados</a></li>
-                    <li><a href="#DivTextos">2. Textos</a></li>
-                    <li><a href="#DivSeo">3. Posicionamiento</a></li>
-                    <li><a href="#DivIdiomas">4. Idiomas</a></li>
-                    <li><a href="#DivBlog">5. Blog</a></li>
-                    <li><a href="#DivImagenes">6. Imágenes</a></li>
-                    <li><a href="#DivBD">7. Bases de datos</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- CONTENIDO -->
-        <div class="content">
-
-            <h3>Datos de contacto</h3>
-
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" id="email" name="email" placeholder="Tu email" required>
-
-            <h3>Formulario</h3>
-
-            <!-- APARTADOS -->
-            <div id="DivApartados" class="service-block">
-                <h3>1. Apartados (200€ / cada uno)</h3>
-                <div class="numbers" id="apartados"></div>
-            </div>
-
-            <!-- TEXTOS -->
-            <div id="DivTextos" class="service-block">
-                <h3>2. Textos</h3>
-                <div class="numbers">
-                    <button type="button" id="textosSi">Sí</button>
-                    <button type="button" id="textosNo">No</button>
-                </div>
-            </div>
-
-            <!-- SEO -->
-            <div id="DivSeo" class="service-block">
-                <h3>3. SEO</h3>
-                <div class="numbers">
-                    <button type="button" id="SEOsSi">Sí</button>
-                    <button type="button" id="SEOsNo">No</button>
-                </div>
-            </div>
-
-            <!-- IDIOMAS -->
-            <div id="DivIdiomas" class="service-block">
-                <h3>4. Idiomas</h3>
-                <div class="numbers" id="apartadosIdiomas"></div>
-            </div>
-
-            <!-- BLOG -->
-            <div id="DivBlog" class="service-block">
-                <h3>5. Blog</h3>
-                <div class="numbers">
-                    <button type="button" id="BlogSi">Sí</button>
-                    <button type="button" id="BlogNo">No</button>
-                </div>
-            </div>
-
-            <!-- IMÁGENES -->
-            <div id="DivImagenes" class="service-block">
-                <h3>6. Imágenes</h3>
-                <div class="numbers">
-                    <button type="button" id="ImagenesSi">Sí</button>
-                    <button type="button" id="ImagenesNo">No</button>
-                </div>
-            </div>
-
-            <!-- BD -->
-            <div id="DivBD" class="service-block">
-                <h3>7. Base de datos</h3>
-                <div class="numbers">
-                    <button type="button" id="BDSi">Sí</button>
-                    <button type="button" id="BDNo">No</button>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- RESUMEN -->
-        <div class="menu-padre-derecha">
-            <div class="summary">
-
-                <h3>Resumen</h3>
-
-                <p>Total:</p>
-                <p class="total">
-                    <span id="total">0</span>€
-                </p>
-
-                <button type="button" class="btn-enviar">
-                    ENVIAR SOLICITUD
-                </button>
-
-            </div>
-        </div>
-
+    <div>
+        <?php include_once ('header.php');?>
     </div>
+    <form id="formPagina">
+        <div class="container">
 
-</form>
+            <!-- MENÚ IZQUIERDO -->
+            <div class="menu-padre">
+                <div class="menu-hijo">
+                    <h3>Menú</h3>
+                    <ul>
+                        <li><a href="#DivApartados">1. Apartados</a></li>
+                        <li><a href="#DivTextos">2. Textos</a></li>
+                        <li><a href="#DivSeo">3. Posicionamiento</a></li>
+                        <li><a href="#DivIdiomas">4. Idiomas</a></li>
+                        <li><a href="#DivBlog">5. Blog</a></li>
+                        <li><a href="#DivImagenes">6. Imágenes</a></li>
+                        <li><a href="#DivBD">7. Bases de datos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CONTENIDO -->
+            <div class="content">
+
+                <h3>Datos de contacto</h3>
+
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+                <h3>Formulario</h3>
+
+                <!-- APARTADOS -->
+                <div id="DivApartados" class="service-block">
+                    <h3>1. Apartados (200€ / cada uno)</h3>
+                    <div class="numbers" id="apartados"></div>
+                </div>
+
+                <!-- TEXTOS -->
+                <div id="DivTextos" class="service-block">
+                    <h3>2. Textos</h3>
+                    <div class="numbers">
+                        <button type="button" id="textosSi">Sí</button>
+                        <button type="button" id="textosNo">No</button>
+                    </div>
+                </div>
+
+                <!-- SEO -->
+                <div id="DivSeo" class="service-block">
+                    <h3>3. SEO</h3>
+                    <div class="numbers">
+                        <button type="button" id="SEOsSi">Sí</button>
+                        <button type="button" id="SEOsNo">No</button>
+                    </div>
+                </div>
+
+                <!-- IDIOMAS -->
+                <div id="DivIdiomas" class="service-block">
+                    <h3>4. Idiomas</h3>
+                    <div class="numbers" id="apartadosIdiomas"></div>
+                </div>
+
+                <!-- BLOG -->
+                <div id="DivBlog" class="service-block">
+                    <h3>5. Blog</h3>
+                    <div class="numbers">
+                        <button type="button" id="BlogSi">Sí</button>
+                        <button type="button" id="BlogNo">No</button>
+                    </div>
+                </div>
+
+                <!-- IMÁGENES -->
+                <div id="DivImagenes" class="service-block">
+                    <h3>6. Imágenes</h3>
+                    <div class="numbers">
+                        <button type="button" id="ImagenesSi">Sí</button>
+                        <button type="button" id="ImagenesNo">No</button>
+                    </div>
+                </div>
+
+                <!-- BD -->
+                <div id="DivBD" class="service-block">
+                    <h3>7. Base de datos</h3>
+                    <div class="numbers">
+                        <button type="button" id="BDSi">Sí</button>
+                        <button type="button" id="BDNo">No</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RESUMEN -->
+            <div class="menu-padre-derecha">
+                <div class="summary">
+
+                    <h3>Resumen</h3>
+
+                    <p>Total:</p>
+                    <p class="total">
+                        <span id="total">0</span>€
+                    </p>
+
+                    <button type="button" class="btn-enviar">
+                        ENVIAR SOLICITUD
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </form>
 
     <script>
         const numContainer = document.getElementById('apartados');
