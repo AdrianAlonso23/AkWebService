@@ -230,7 +230,6 @@
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                 <input type="email" id="email" name="email" placeholder="Tu email" required>
 
-                <h3>Formulario</h3>
 
                 <!-- APARTADOS -->
                 <div id="DivApartados" class="service-block">
@@ -302,7 +301,7 @@
                         <span id="total">0</span>€
                     </p>
 
-                    <button type="button" class="btn-enviar">
+                    <button type="submit" class="btn-enviar">
                         ENVIAR SOLICITUD
                     </button>
 
@@ -470,6 +469,25 @@
 
             totalSpan.textContent = total;
         }
+        const form = document.getElementById("formEcommerce");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // evita recarga (opcional)
+
+            form.reset(); // limpia inputs (nombre, email, select)
+
+            // Resetear variables
+            productos = 0;
+            envio = false;
+            pagosExtra = 0;
+            extras = 0;
+
+            // Quitar clases active
+            document.querySelectorAll(".active").forEach(el => el.classList.remove("active"));
+
+            // Resetear total
+            totalSpan.textContent = "0";
+        });
     </script>
 
     <script src="formulario.js"></script>
