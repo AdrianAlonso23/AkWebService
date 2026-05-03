@@ -204,6 +204,7 @@
             outline: none;
             transition: 0.3s;
             resize: none;
+            margin-bottom: 30px;
         }
         input:focus{
             box-shadow: 0 0 12px #a56fff;
