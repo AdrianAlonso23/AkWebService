@@ -12,13 +12,9 @@ nav{
 nav img{
   width: 90px;
 }
-.logo a:hover{
-  color: violet;
-  text-decoration: none;
-}
 .menu-nav li a:hover{
-  color: violet;
-  text-decoration: none;
+ color: #cda6ff;
+  text-shadow: 0 0 8px #6f2bff;
 }
 
 .logo {
@@ -50,4 +46,9 @@ nav {
 a {
   color: white;
   text-decoration: none;
+}
+.ul-menu a.active {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, #22ADED, #AF56DB) 1;
+  padding-bottom: 3px;
 }
