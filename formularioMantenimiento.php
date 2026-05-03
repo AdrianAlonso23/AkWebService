@@ -50,6 +50,7 @@
         
         .menu-hijo {
             width: 200px;
+            
             padding: 20px;
             background: #0b0b0d;
             box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
@@ -185,9 +186,6 @@
             border-left: 3px solid #6f2bff;
             border-radius: 8px;
         }
-        .form-servicios{
-            width: 550px;
-        }
         input {
             padding: 10px;
             background: #0c0c0f;
@@ -203,39 +201,6 @@
         input:focus{
             box-shadow: 0 0 12px #a56fff;
             border-color: #a56fff;
-        }
-        .info-icono {
-            position: relative;
-            cursor: pointer;
-            width: 20px;
-            margin-left: 8px;
-        }
-
-        .tooltip-text {
-            visibility: hidden;
-            width: 300px;
-            background-color: #333;
-            color: #fff;
-            text-align: left;
-            padding: 10px;
-            border-radius: 6px;
-
-            position: absolute;
-            top: 25px;
-            left: 0;
-            z-index: 1;
-
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .info-icono:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-        .info-titulo {
-            display: flex;
-            align-items: center;
         }
     </style>
 </head>
@@ -257,14 +222,36 @@
                     </ul>
                 </div>
             </div>
-            <div class="form-servicios">
-                <div>
-                    <h3>Formulario</h3>
-                    <h5 class="textos">
-                        Mantén tu página web siempre actualizada, segura y optimizada con nuestros planes de mantenimiento mensual. 
-                        Nos encargamos de la parte técnica para que tú puedas centrarte en hacer crecer tu negocio. 
-                        Elige el plan que mejor se adapte a tus necesidades y nivel de soporte requerido.
-                    </h5>
+            <div class="content">
+                <h3>Datos de contacto</h3>
+
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
+            <h3>Formulario</h3>
+                <p class="textos">
+                    Mantén tu página web siempre actualizada, segura y optimizada con nuestros planes de mantenimiento mensual. 
+                    Nos encargamos de la parte técnica para que tú puedas centrarte en hacer crecer tu negocio. 
+                    Elige el plan que mejor se adapte a tus necesidades y nivel de soporte requerido.
+                </p>
+                <div  class="service-block">
+                    <h3>1. Mantenimiento Básico</h3>
+                    <p class="textos">
+                        Ideal para páginas web corporativas o proyectos pequeños que necesitan 
+                        estabilidad y actualizaciones periódicas. Incluye actualizaciones del sistema, 
+                        copias de seguridad mensuales y soporte técnico básico por incidencias.
+                    </p>
+                    <button id="mantBasico"  class="numbers">
+                        Básico · 30€/mes
+                    </button>
+                </div>
+                <div class="service-block">
+                    <h3>2. Mantenimiento Avanzado</h3>
+                    <p class="textos">Pensado para negocios que requieren mayor seguridad y mejoras continuas. 
+                        Incluye monitorización, optimización de rendimiento, refuerzo de seguridad, 
+                        copias de seguridad automáticas y pequeños cambios o ajustes mensuales.</p>
+                    <button id="mantAvanzado" class="numbers">
+                        Avanzado · 60€/mes
+                    </button>
                 </div>
                 <!-- CONTENT --> 
                 <div class="content">
@@ -313,12 +300,12 @@
                     </div>
                 </div>
             </div>
-            <!-- RESUMEN DERECHA -->
+        <!-- RESUMEN DERECHA -->
             <div class="menu-padre-derecha">
                 <div class="summary">
                 <h3>Precio</h3>
                 <p class="total">Total: <span id="total">0</span>€</p>
-                <button type="submit" class="btn-enviar">
+                <button type="button" class="btn-enviar">
                     ENVIAR SOLICITUD
                 </button>
             </div>
@@ -352,25 +339,6 @@
             totalSpan.textContent = total;
         }
 
-        const form = document.getElementById("formEcommerce");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // evita recarga (opcional)
-
-            form.reset(); // limpia inputs (nombre, email, select)
-
-            // Resetear variables
-            productos = 0;
-            envio = false;
-            pagosExtra = 0;
-            extras = 0;
-
-            // Quitar clases active
-            document.querySelectorAll(".active").forEach(el => el.classList.remove("active"));
-
-            // Resetear total
-            totalSpan.textContent = "0";
-        });
     </script>
     <script src="formulario.js"></script>
 </body>

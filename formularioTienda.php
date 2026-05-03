@@ -8,111 +8,280 @@
 
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-        }
-        .tittle-formulario {
-            height: 230px;
-            background-image: url('img/fondo-formularios.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 2px solid #6f2bff;
-            box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
-        }
-        h2 {
-            font-size: 40px;
-            text-shadow: 0 0 15px #a56fff;
-        }
-        .textos{
-            margin-top: 10px;
-            margin-bottom: 18px;
-            color: #b98cff;
-            font-size: 14px;
-            line-height: 1.6;
-            background: rgba(111, 43, 255, 0.08);
-            padding: 12px 15px;
-            border-left: 3px solid #6f2bff;
-            border-radius: 8px;
-        }
-        .form-servicios{
-            width: 550px;
-        }
-        .container {
-            display: flex;
-            max-width: 1030px;
-            margin: 40px auto;
-            gap: 25px;
-        }
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+.tittle-formulario {
+    height: 230px;
+    background-image: url('img/fondo-formularios.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #6f2bff;
+    box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
+}
+h2 {
+    font-size: 40px;
+    text-shadow: 0 0 15px #a56fff;
+}
+.textos {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    color: #b98cff;
+    font-size: 14px;
+    line-height: 1.6;
+    background: rgba(111, 43, 255, 0.08);
+    padding: 12px 15px;
+    border-left: 3px solid #6f2bff;
+    border-radius: 8px;
+}
+.form-servicios {
+    width: 550px;
+}
+.container {
+    display: flex;
+    max-width: 1030px;
+    margin: 40px auto;
+    gap: 25px;
+}
+.menu-padre {
+    width: 200px;
+    padding-right: 50px;
+}
+.menu-hijo {
+    width: 200px;
+    padding: 20px;
+    background: #0b0b0d;
+    border-radius: 15px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
+    position: fixed;
+}
+.menu-hijo ul {
+    list-style: none;
+    padding: 0;
+}
+.menu-hijo li {
+    margin-bottom: 12px;
+}
+.menu-hijo a {
+    color: #cda6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-hijo a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #a56fff;
+}
+.content {
+    flex: 1;
+    background: #0b0b0d;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+}
+.service-block {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(150, 64, 255, 0.3);
+}
+.service-block h3 {
+    color: #cda6ff;
+    text-shadow: 0 0 7px #6f2bff;
+}
+.numbers button {
+    margin: 4px;
+    padding: 8px 14px;
+    background: #000;
+    color: #cda6ff;
+    border: 1px solid #6f2bff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.numbers button.active {
+    background: #a56fff;
+    color: #000;
+    box-shadow: 0 0 15px #a56fff;
+}
+.menu-padre-derecha {
+    width: 200px;
+    height: fit-content;
+}
+.summary {
+    width: 200px;
+    background: #0b0b0d;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+    position: fixed;
+    left: 50%;
+    transform: translateX(325px);
+}
+.total {
+    font-size: 24px;
+    color: #cda6ff;
+    text-shadow: 0 0 10px #a56fff;
+}
+.btn-enviar {
+    background: linear-gradient(90deg, #22ADED, #AF56DB);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+.btn-enviar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #a56fff;
+}
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #000;
+    border: 1px solid #6f2bff;
+    border-radius: 10px;
+    color: #cda6ff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s;
+}
+input {
+    padding: 10px;
+    background: #0c0c0f;
+    border: 2px solid #6f2bff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    outline: none;
+    transition: 0.3s;
+    resize: none;
+}
+input:focus {
+    box-shadow: 0 0 12px #a56fff;
+    border-color: #a56fff;
+}
+.info-titulo {
+    display: flex;
+    align-items: center;
+}
 
-        .menu-padre {
-            width: 200px;
-            padding-right: 50px;
-        }
+.info-icono {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
 
-        .menu-hijo {
-            width: 200px;
-            padding: 20px;
-            background: #0b0b0d;
-            border-radius: 15px;
-            border: 1px solid #6f2bff;
-            box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
-            position: fixed;
-        }
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 280px;
+    background: #0b0b0d;
+    color: #cda6ff;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 18px rgba(111, 43, 255, 0.35);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 100;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform: translateY(-4px);
+    pointer-events: none;
+}
 
-        .menu-hijo ul {
-            list-style: none;
-            padding: 0;
-        }
+.info-icono:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .menu-hijo li {
-            margin-bottom: 12px;
-        }
+.tooltip button {
+    position: relative;
+}
 
-        .menu-hijo a {
-            color: #cda6ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.tooltip button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #0b0b0d;
+    color: #cda6ff;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 9px 13px;
+    border-radius: 10px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 18px rgba(111, 43, 255, 0.35);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 10;
+}
 
-        .menu-hijo a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px #a56fff;
-        }
-
-        .content {
-            flex: 1;
-            background: #0b0b0d;
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid #6f2bff;
-            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
-        }
-
-        .service-block {
-            margin-bottom: 35px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(150, 64, 255, 0.3);
-        }
-        .service-block h3 {
-            color: #cda6ff;
-            text-shadow: 0 0 7px #6f2bff;
-        }
-
-        .numbers button {
-            margin: 4px;
-            padding: 8px 14px;
-            background: #000;
-            color: #cda6ff;
-            border: 1px solid #6f2bff;
-            border-radius: 7px;
-            cursor: pointer;
-
-        }
+.tooltip button:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.breadcrumb {
+    margin-left: 50px;
+    padding-top: 30px;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: '/';
+  margin-left: 4px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #22ADED, #AF56DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover {
+  color: #cda6ff;
+  text-shadow: 0 0 8px #6f2bff;
+}
+.breadcrumb li[aria-current="page"] {
+  color: white;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, #22ADED, #AF56DB) 1;
+  padding-bottom: 1px;
+}
 
         .numbers button.active {
             background: #a56fff;
@@ -250,6 +419,13 @@
     <div>
         <?php include_once ('header.php');?>
     </div>
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="Servicios.php">Servicios</a></li>
+        <li aria-current="page">Formulario de Tienda</li>
+      </ol>
+    </nav>
     <form id="formEcommerce">
         <div class="container">
             <!-- MENU -->
