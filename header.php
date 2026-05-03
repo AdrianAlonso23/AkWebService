@@ -15,3 +15,13 @@
     </div>
   </nav>
 </header>
+
+<script>
+  const page = window.location.pathname.split('/').pop();
+  document.querySelectorAll('.ul-menu a').forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (page === linkPage || (page.includes('Proyecto') && linkPage === 'Proyectos.php')) {
+      link.classList.add('active');
+    }
+  });
+</script>
