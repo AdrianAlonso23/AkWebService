@@ -181,6 +181,9 @@
             border-left: 3px solid #6f2bff;
             border-radius: 8px;
         }
+        .form-servicios{
+            width: 550px;
+        }
         input {
             padding: 10px;
             background: #0c0c0f;
@@ -191,10 +194,44 @@
             outline: none;
             transition: 0.3s;
             resize: none;
+            margin-bottom: 30px;
         }
         input:focus{
             box-shadow: 0 0 12px #a56fff;
             border-color: #a56fff;
+        }
+        .info-icono {
+            position: relative;
+            cursor: pointer;
+            width: 20px;
+            margin-left: 8px;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            padding: 10px;
+            border-radius: 6px;
+
+            position: absolute;
+            top: 25px;
+            left: 0;
+            z-index: 1;
+
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .info-icono:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .info-titulo {
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -221,75 +258,138 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- CONTENIDO -->
-            <div class="content">
-
-                <h3>Datos de contacto</h3>
-
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" id="email" name="email" placeholder="Tu email" required>
-
-
-                <!-- APARTADOS -->
-                <div id="DivApartados" class="service-block">
-                    <h3>1. Apartados (200€ / cada uno)</h3>
-                    <div class="numbers" id="apartados"></div>
+            <div class="form-servicios">
+                <div>
+                    <h3>Formulario</h3>
+                    <h5 class="textos">
+                        Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
+                        Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
+                        El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
+                        Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
+                    </h5>
                 </div>
+                <!-- CONTENIDO -->
+                <div class="content">
 
-                <!-- TEXTOS -->
-                <div id="DivTextos" class="service-block">
-                    <h3>2. Textos</h3>
-                    <div class="numbers">
-                        <button type="button" id="textosSi">Sí</button>
-                        <button type="button" id="textosNo">No</button>
+                    <h3>Datos de contacto</h3>
+
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+
+                    <!-- APARTADOS -->
+                    <div id="DivApartados" class="service-block">
+                        <h3>1. Apartados (200€ / cada uno)</h3>
+                        <div class="numbers" id="apartados"></div>
                     </div>
-                </div>
 
-                <!-- SEO -->
-                <div id="DivSeo" class="service-block">
-                    <h3>3. SEO</h3>
-                    <div class="numbers">
-                        <button type="button" id="SEOsSi">Sí</button>
-                        <button type="button" id="SEOsNo">No</button>
+                    <!-- TEXTOS -->
+                    <div id="DivTextos" class="service-block">
+                        <div class="info-titulo">
+                            <h3>2. Textos</h3>
+                            <span class="info-icono"><svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6f2bff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#a56fff"></path> </g></svg>
+                                <span class="tooltip-text">
+                                    Incluye la redacción profesional de los contenidos de tu página web. 
+                                    Nos encargamos de crear textos claros, atractivos y adaptados a tu negocio. 
+                                    Ideal si no dispones de contenido propio.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="numbers">
+                            <button type="button" id="textosSi">Sí</button>
+                            <button type="button" id="textosNo">No</button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- IDIOMAS -->
-                <div id="DivIdiomas" class="service-block">
-                    <h3>4. Idiomas</h3>
-                    <div class="numbers" id="apartadosIdiomas"></div>
-                </div>
-
-                <!-- BLOG -->
-                <div id="DivBlog" class="service-block">
-                    <h3>5. Blog</h3>
-                    <div class="numbers">
-                        <button type="button" id="BlogSi">Sí</button>
-                        <button type="button" id="BlogNo">No</button>
+                    <!-- SEO -->
+                    <div id="DivSeo" class="service-block">
+                        <div class="info-titulo">
+                            <h3>3. SEO</h3>
+                            <span class="info-icono"><svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6f2bff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#a56fff"></path> </g></svg>
+                                <span class="tooltip-text">
+                                    Optimización básica para mejorar tu posicionamiento en buscadores. 
+                                    Se trabajan palabras clave, estructura y rendimiento de la web. 
+                                    Ayuda a que más usuarios encuentren tu negocio online.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="numbers">
+                            <button type="button" id="SEOsSi">Sí</button>
+                            <button type="button" id="SEOsNo">No</button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- IMÁGENES -->
-                <div id="DivImagenes" class="service-block">
-                    <h3>6. Imágenes</h3>
-                    <div class="numbers">
-                        <button type="button" id="ImagenesSi">Sí</button>
-                        <button type="button" id="ImagenesNo">No</button>
+                    <!-- IDIOMAS -->
+                    <div id="DivIdiomas" class="service-block">
+                        <div class="info-titulo">
+                            <h3>4. Idiomas</h3>
+                            <span class="info-icono"><svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6f2bff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#a56fff"></path> </g></svg>
+                                <span class="tooltip-text">
+                                    Permite tener tu web disponible en varios idiomas. 
+                                    Facilita llegar a clientes internacionales o ampliar tu mercado. 
+                                    Cada idioma adicional requiere adaptación del contenido.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="numbers" id="apartadosIdiomas"></div>
                     </div>
-                </div>
 
-                <!-- BD -->
-                <div id="DivBD" class="service-block">
-                    <h3>7. Base de datos</h3>
-                    <div class="numbers">
-                        <button type="button" id="BDSi">Sí</button>
-                        <button type="button" id="BDNo">No</button>
+                    <!-- BLOG -->
+                    <div id="DivBlog" class="service-block">
+                        <div class="info-titulo">
+                            <h3>5. Blog</h3>
+                            <span class="info-icono"><svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6f2bff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#a56fff"></path> </g></svg>
+                                <span class="tooltip-text">
+                                    Añade una sección para publicar artículos o noticias. 
+                                    Es útil para mejorar el SEO y mantener tu web actualizada. 
+                                    También ayuda a generar contenido de valor para tus usuarios.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="numbers">
+                            <button type="button" id="BlogSi">Sí</button>
+                            <button type="button" id="BlogNo">No</button>
+                        </div>
                     </div>
-                </div>
 
+                    <!-- IMÁGENES -->
+                    <div id="DivImagenes" class="service-block">
+                        <div class="info-titulo">
+                            <h3>6. Imágenes</h3>
+                            <span class="info-icono"><svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6f2bff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#a56fff"></path> </g></svg>
+                                <span class="tooltip-text">
+                                    Incluye selección y optimización de imágenes para tu web. 
+                                    Mejora la estética y la experiencia visual del usuario. 
+                                    Las imágenes se adaptan al diseño y rendimiento del sitio.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="numbers">
+                            <button type="button" id="ImagenesSi">Sí</button>
+                            <button type="button" id="ImagenesNo">No</button>
+                        </div>
+                    </div>
+
+                    <!-- BD -->
+                    <div id="DivBD" class="service-block">
+                        <div class="info-titulo">
+                            <h3>7. Base de datos</h3>
+                            <span class="info-icono"><svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6f2bff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#a56fff"></path> </g></svg>
+                                <span class="tooltip-text">
+                                    Permite integrar funcionalidades avanzadas en tu web. 
+                                    Ideal para formularios, registros o gestión de información. 
+                                    Aporta mayor dinamismo e interactividad al proyecto.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="numbers">
+                            <button type="button" id="BDSi">Sí</button>
+                            <button type="button" id="BDNo">No</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
             <!-- RESUMEN -->
             <div class="menu-padre-derecha">
                 <div class="summary">
