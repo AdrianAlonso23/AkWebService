@@ -15,23 +15,23 @@
               
         /* TÍTULO */
         .tittle-formulario {
-            height: 230px;
-            background-image: url('img/fondo-formularios.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 2px solid #6f2bff;
-            box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
+            margin-bottom: 20px;
+            text-align: center;
         }
-        
-        h2 {
-            color: #fff;
-            font-size: 40px;
-            text-shadow: 0 0 15px #a56fff;
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #6f2bff;  
         }
-
+        .textos {
+            margin-top: 10px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+        .form-servicios {
+            width: 550px;
+        }
         .container {
             display: flex;
             max-width: 1030px;
@@ -233,6 +233,104 @@
             display: flex;
             align-items: center;
         }
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 280px;
+    background: #0b0b0d;
+    color: #cda6ff;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 18px rgba(111, 43, 255, 0.35);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 100;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform: translateY(-4px);
+    pointer-events: none;
+}
+
+.info-icono:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.tooltip button {
+    position: relative;
+}
+
+.tooltip button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #0b0b0d;
+    color: #cda6ff;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 9px 13px;
+    border-radius: 10px;
+    border: 1px solid #6f2bff;
+    box-shadow: 0 0 18px rgba(111, 43, 255, 0.35);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 10;
+}
+
+.tooltip button:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.breadcrumb {
+    margin-left: 50px;
+    padding-top: 30px;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: '/';
+  margin-left: 4px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #22ADED, #AF56DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover {
+  color: #cda6ff;
+  text-shadow: 0 0 8px #6f2bff;
+}
+.breadcrumb li[aria-current="page"] {
+  color: white;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, #22ADED, #AF56DB) 1;
+  padding-bottom: 1px;
+}
     </style>
 </head>
 
@@ -240,6 +338,25 @@
     <div>
         <?php include_once ('header.php');?>
     </div>
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="Servicios.php">Servicios</a></li>
+        <li aria-current="page">Formulario de Pagina</li>
+      </ol>
+    </nav>
+    <div class="tittle-formulario">
+        <h1>Formulario</h3>
+    </div>
+    <div class="container">
+        <h5 class="textos">
+            Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
+            Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
+            El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
+            Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
+        </h5>
+    </div>
+
     <form id="formPagina">
         <div class="container">
 
@@ -259,15 +376,6 @@
                 </div>
             </div>
             <div class="form-servicios">
-                <div>
-                    <h3>Formulario</h3>
-                    <h5 class="textos">
-                        Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
-                        Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
-                        El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
-                        Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
-                    </h5>
-                </div>
                 <!-- CONTENIDO -->
                 <div class="content">
 
