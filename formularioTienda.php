@@ -12,32 +12,22 @@
     font-family: Arial, sans-serif;
     background: #000;
     color: #fff;
+
 }
 .tittle-formulario {
-    height: 230px;
-    background-image: url('img/fondo-formularios.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #6f2bff;
-    box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
+    text-align: center;
+    margin-bottom: 20px;
 }
-h2 {
-    font-size: 40px;
-    text-shadow: 0 0 15px #a56fff;
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #6f2bff;  
 }
 .textos {
     margin-top: 10px;
     margin-bottom: 18px;
-    color: #b98cff;
     font-size: 14px;
-    line-height: 1.6;
-    background: rgba(111, 43, 255, 0.08);
-    padding: 12px 15px;
-    border-left: 3px solid #6f2bff;
-    border-radius: 8px;
 }
 .form-servicios {
     width: 550px;
@@ -60,6 +50,7 @@ h2 {
     border: 1px solid #6f2bff;
     box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
     position: fixed;
+    top: 365px;
 }
 .menu-hijo ul {
     list-style: none;
@@ -122,6 +113,7 @@ h2 {
     position: fixed;
     left: 50%;
     transform: translateX(325px);
+    top: 365px;
 }
 .total {
     font-size: 24px;
@@ -282,7 +274,7 @@ input:focus {
   border-image: linear-gradient(90deg, #22ADED, #AF56DB) 1;
   padding-bottom: 1px;
 }
-    </style>
+</style>
 </head>
 
 <body>
@@ -296,6 +288,17 @@ input:focus {
         <li aria-current="page">Formulario de Tienda</li>
       </ol>
     </nav>
+    <div class="tittle-formulario">   
+        <h1>Formulario</h1>
+    </div>
+    <div class="container">
+        <h5 class="textos">
+            Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
+            Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
+            El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
+            Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
+        </h5>
+    </div>
     <form id="formEcommerce">
         <div class="container">
             <!-- MENU -->
@@ -313,15 +316,6 @@ input:focus {
                 </div>
             </div>
             <div class="form-servicios">
-                <div>
-                    <h3>Formulario</h3>
-                    <h5 class="textos">
-                        Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
-                        Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
-                        El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
-                        Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
-                    </h5>
-                </div>
                 <!-- CONTENT --> 
                 <div class="content">
                     <h3>Datos de contacto</h3>

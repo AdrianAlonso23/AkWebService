@@ -7,181 +7,232 @@
     <title>Formulario de Servicios</title>
      <style>
         body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
-.tittle-formulario {
-    height: 230px;
-    background-image: url('img/fondo-formularios.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #6f2bff;
-    box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
-}
-h2 {
-    font-size: 40px;
-    text-shadow: 0 0 15px #a56fff;
-}
-.textos {
-    margin-top: 10px;
-    margin-bottom: 18px;
-    color: #b98cff;
-    font-size: 14px;
-    line-height: 1.6;
-    background: rgba(111, 43, 255, 0.08);
-    padding: 12px 15px;
-    border-left: 3px solid #6f2bff;
-    border-radius: 8px;
-}
-.form-servicios {
-    width: 550px;
-}
-.container {
-    display: flex;
-    max-width: 1030px;
-    margin: 40px auto;
-    gap: 25px;
-}
-.menu-padre {
-    width: 200px;
-    padding-right: 50px;
-}
-.menu-hijo {
-    width: 200px;
-    padding: 20px;
-    background: #0b0b0d;
-    border-radius: 15px;
-    border: 1px solid #6f2bff;
-    box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
-    position: fixed;
-}
-.menu-hijo ul {
-    list-style: none;
-    padding: 0;
-}
-.menu-hijo li {
-    margin-bottom: 12px;
-}
-.menu-hijo a {
-    color: #cda6ff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.menu-hijo a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #a56fff;
-}
-.content {
-    flex: 1;
-    background: #0b0b0d;
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid #6f2bff;
-    box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
-}
-.service-block {
-    margin-bottom: 35px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(150, 64, 255, 0.3);
-}
-.service-block h3 {
-    color: #cda6ff;
-    text-shadow: 0 0 7px #6f2bff;
-}
-.numbers button {
-    margin: 4px;
-    padding: 8px 14px;
-    background: #000;
-    color: #cda6ff;
-    border: 1px solid #6f2bff;
-    border-radius: 7px;
-    cursor: pointer;
-}
-.numbers button.active {
-    background: #a56fff;
-    color: #000;
-    box-shadow: 0 0 15px #a56fff;
-}
-.menu-padre-derecha {
-    width: 200px;
-    height: fit-content;
-}
-.summary {
-    width: 200px;
-    background: #0b0b0d;
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid #6f2bff;
-    box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
-    position: fixed;
-    left: 50%;
-    transform: translateX(325px);
-}
-.total {
-    font-size: 24px;
-    color: #cda6ff;
-    text-shadow: 0 0 10px #a56fff;
-}
-.btn-enviar {
-     background: linear-gradient(90deg, #22ADED, #AF56DB);
-  border: none;
-  padding: 12px 25px;
-  border-radius: 12px;
-  color: white;
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-}
-.btn-enviar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #a56fff;
-}
-.form-group select {
-    width: 100%;
-    padding: 12px 14px;
-    background: #000;
-    border: 1px solid #6f2bff;
-    border-radius: 10px;
-    color: #cda6ff;
-    font-size: 15px;
-    outline: none;
-    transition: 0.25s;
-}
-input {
-    padding: 10px;
-    background: #0c0c0f;
-    border: 2px solid #6f2bff;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 0.8rem;
-    outline: none;
-    transition: 0.3s;
-    resize: none;
-}
-input:focus {
-    box-shadow: 0 0 12px #a56fff;
-    border-color: #a56fff;
-}
-.info-titulo {
-    display: flex;
-    align-items: center;
-}
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+              
+        /* TÍTULO */
+        .tittle-formulario {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #6f2bff;  
+        }
+        .textos {
+            margin-top: 10px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+        .form-servicios {
+            width: 550px;
+        }
+        .container {
+            display: flex;
+            max-width: 1030px;
+            margin: 40px auto;
+            gap: 25px;
+        }
 
-.info-icono {
-    position: relative;
-    cursor: pointer;
-    width: 20px;
-    margin-left: 8px;
-    display: flex;
-    align-items: center;
-}
+        /* MENÚ IZQUIERDO */
+        .menu-padre {
+            width: 200px;
+            height: fit-content;
+            padding-right: 50px;
+
+        }
+
+        .menu-hijo {
+            width: 200px;
+            padding: 20px;
+            background: #0b0b0d;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.2);
+            border-radius: 15px;
+            border: 1px solid #6f2bff;
+            position: fixed;
+        }
+
+        .menu-hijo ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu-hijo li {
+            margin-bottom: 12px;
+        }
+
+        .menu-hijo a {
+            text-decoration: none;
+            color: #cda6ff;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .menu-hijo a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #a56fff;
+        }
+
+        .content {
+            flex: 1;
+            background: #0b0b0d;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+        }
+
+        .service-block {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(150, 64, 255, 0.3);
+        }
+
+        .service-block h3 {
+            margin: 0 0 10px;
+            color: #cda6ff;
+            text-shadow: 0 0 7px #6f2bff;
+        }
+
+        .service-block p {
+            opacity: 0.8;
+        }
+
+        .numbers button {
+            margin: 4px;
+            padding: 8px 14px;
+            border: 1px solid #6f2bff;
+            background: #000;
+            color: #cda6ff;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: 0.25s;
+        }
+
+        .numbers button:hover {
+            background: #6f2bff;
+            color: #000;
+            box-shadow: 0 0 12px #a56fff;
+        }
+
+        .numbers button.active {
+            background: #a56fff;
+            color: #000;
+            box-shadow: 0 0 15px #a56fff;
+        }
+
+        .menu-padre-derecha {
+            width: 200px;
+            height: fit-content;
+        }
+
+        .summary {
+            width: 200px;
+            background: #0b0b0d;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #6f2bff;
+            box-shadow: 0 0 20px rgba(162, 93, 255, 0.25);
+            position: fixed;
+            left: 50%;
+            transform: translateX(325px);
+        }
+
+
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #cda6ff;
+            text-shadow: 0 0 10px #a56fff;
+        }
+
+        /* BOTÓN ENVIAR */
+        .btn-enviar {
+            background: linear-gradient(90deg, #a56fff, #6f2bff);
+            color: #000;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .btn-enviar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 18px #a56fff;
+        }
+        .textos{
+            margin-top: 10px;
+            margin-bottom: 18px;
+            color: #b98cff;
+            font-size: 14px;
+            line-height: 1.6;
+            background: rgba(111, 43, 255, 0.08);
+            padding: 12px 15px;
+            border-left: 3px solid #6f2bff;
+            border-radius: 8px;
+        }
+        .form-servicios{
+            width: 550px;
+        }
+        input {
+            padding: 10px;
+            background: #0c0c0f;
+            border: 2px solid #6f2bff;
+            border-radius: 10px;
+            color: #fff;
+            font-size:0.8rem;
+            outline: none;
+            transition: 0.3s;
+            resize: none;
+            margin-bottom: 30px;
+        }
+        input:focus{
+            box-shadow: 0 0 12px #a56fff;
+            border-color: #a56fff;
+        }
+        .info-icono {
+            position: relative;
+            cursor: pointer;
+            width: 20px;
+            margin-left: 8px;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            padding: 10px;
+            border-radius: 6px;
+
+            position: absolute;
+            top: 25px;
+            left: 0;
+            z-index: 1;
+
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .info-icono:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .info-titulo {
+            display: flex;
+            align-items: center;
+        }
 
 .tooltip-text {
     visibility: hidden;
@@ -288,13 +339,25 @@ input:focus {
     <div>
         <?php include_once ('header.php');?>
     </div>
-    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
       <ol>
         <li><a href="index.php">Inicio</a></li>
         <li><a href="Servicios.php">Servicios</a></li>
         <li aria-current="page">Formulario de Pagina</li>
       </ol>
     </nav>
+    <div class="tittle-formulario">
+        <h1>Formulario</h3>
+    </div>
+    <div class="container">
+        <h5 class="textos">
+            Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
+            Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
+            El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
+            Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
+        </h5>
+    </div>
+
     <form id="formPagina">
         <div class="container">
 
@@ -314,15 +377,6 @@ input:focus {
                 </div>
             </div>
             <div class="form-servicios">
-                <div>
-                    <h3>Formulario</h3>
-                    <h5 class="textos">
-                        Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
-                        Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
-                        El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
-                        Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
-                    </h5>
-                </div>
                 <!-- CONTENIDO -->
                 <div class="content">
 
