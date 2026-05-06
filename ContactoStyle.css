@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+  margin: 0;
+}
 
 body {
     background: #000;
@@ -52,8 +55,6 @@ form > div {
     flex-direction: column;
     gap: 10px;
 }
-
-/* Inputs estilo futurista */
 form {
     width: 80%;
     display: flex;
@@ -80,11 +81,10 @@ input:focus, textarea:focus {
     border-color: #a56fff;
 }
 
-/* Botón moderno */
 button {
     width: 100%;
     padding: 14px;
-  background: linear-gradient(90deg, #22ADED, #AF56DB);
+    background: linear-gradient(90deg, #22ADED, #AF56DB);
     border: none;
     border-radius: 12px;
     color: white;
@@ -99,7 +99,6 @@ button:hover {
     box-shadow: 0 0 20px #a56fff;
 }
 
-/* --- Tarjetas de contacto --- */
 .d-contacto {
     width: 50%;
     display: flex;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Servicios</title>
-    <style>
+     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -260,6 +260,7 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 .tooltip button {
     position: relative;
 }

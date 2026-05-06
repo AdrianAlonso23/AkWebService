@@ -121,16 +121,16 @@ h1 {
     text-shadow: 0 0 10px #a56fff;
 }
 .btn-enviar {
-    background: linear-gradient(90deg, #22ADED, #AF56DB);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
+     background: linear-gradient(90deg, #22ADED, #AF56DB);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
 }
 .btn-enviar:hover {
     transform: scale(1.05);
