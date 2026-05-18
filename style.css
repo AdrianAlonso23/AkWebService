@@ -135,7 +135,6 @@ h1 {
 
 
 
-/* ===== Animación 2: tarjetas (scale-in) ===== */
 .anim-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -148,8 +147,6 @@ h1 {
 }
 
 
-
-/* Estado inicial para que GSAP anime desde aquí */
 .card,
 .anim-scale {
   background: #0b0b0d;
@@ -192,7 +189,6 @@ h1 {
 }
 
 
-/* pequeño hover para feedback (opcional) */
 .card:hover {
   box-shadow: 0 14px 40px rgba(125, 60, 255, 0.18);
 }
@@ -302,7 +298,7 @@ h1 {
 
 
 
-/****** Servicios ****/
+/************************************ Servicios ************************************/
 
 h2 {
   text-align: center;
@@ -396,14 +392,12 @@ a:hover {
 }
 
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .servicio-card {
     width: 85%;
   }
 }
 
-/* --- Layout principal --- */
 .contact-section {
   display: flex;
   justify-content: space-between;
@@ -518,7 +512,6 @@ textarea:focus {
 }
 
 /****** Blog *****/
-/* Contenedor principal de posts */
 #posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -528,7 +521,6 @@ textarea:focus {
   padding: 0 20px;
 }
 
-/* Card de cada post */
 #posts article {
   background-color: #0b0b0d;
   border-radius: 10px;
@@ -542,14 +534,12 @@ textarea:focus {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Títulos con enlace */
 #posts article h2 a {
   text-decoration: none;
   color: #fff;
 }
 
 
-/* Extracto */
 #posts .post-content {
   margin-top: 10px;
   line-height: 1.6;
@@ -557,7 +547,6 @@ textarea:focus {
   overflow: hidden;
 }
 
-/* Botón "Leer más" */
 .post-card-btn {
   display: inline-block;
   margin-top: 10px;
@@ -573,7 +562,6 @@ textarea:focus {
   background-color: #005bb5;
 }
 
-/****** POST INDIVIDUAL ******/
 
 .post-single {
   max-width: 900px;
@@ -584,9 +572,6 @@ textarea:focus {
   border: 1px solid #6f2bff;
   box-shadow: 0 0 30px rgba(162, 93, 255, 0.25);
 }
-
-/* TITULO */
-
 .post-single h1 {
   font-size: 2.6rem;
   margin-bottom: 15px;
@@ -595,9 +580,6 @@ textarea:focus {
   line-height: 1.2;
   text-shadow: 0 0 12px #6f2bff;
 }
-
-/* META INFO */
-
 .entry-meta {
   font-size: 0.9rem;
   color: #aaa;
@@ -605,22 +587,14 @@ textarea:focus {
   border-bottom: 1px solid #222;
   padding-bottom: 10px;
 }
-
-/* CONTENIDO */
-
 .post-content {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #e6e6e6;
 }
-
-/* PARRAFOS */
-
 .post-content p {
   margin-bottom: 22px;
 }
-
-/* SUBTITULOS */
 
 .post-content h2 {
   margin-top: 45px;
@@ -636,41 +610,29 @@ textarea:focus {
   font-size: 1.4rem;
 }
 
-/* LISTAS */
-
 .post-content ul,
 .post-content ol {
   margin-left: 25px;
   margin-bottom: 25px;
 }
-
 .post-content li {
   margin-bottom: 10px;
 }
-
-/* ENLACES */
 
 .post-content a {
   color: #9c5bff;
   font-weight: 500;
   text-decoration: none;
 }
-
 .post-content a:hover {
   text-decoration: underline;
 }
-
-/* IMAGENES */
-
 .post-content img {
   width: 100%;
   border-radius: 12px;
   margin: 30px 0;
   box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
 }
-
-/* BLOQUES DE CODIGO */
-
 .post-content pre {
   background: #111;
   padding: 20px;
@@ -685,8 +647,6 @@ textarea:focus {
   font-family: monospace;
 }
 
-/* CITA */
-
 .post-content blockquote {
   border-left: 4px solid #AF56DB;
   padding-left: 20px;
@@ -694,8 +654,6 @@ textarea:focus {
   color: #ccc;
   font-style: italic;
 }
-
-/* BOTON VOLVER */
 
 .back-blog {
   display: inline-block;
@@ -713,8 +671,6 @@ textarea:focus {
   transform: scale(1.05);
   box-shadow: 0 0 20px #AF56DB;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
@@ -885,7 +841,6 @@ textarea:focus {
   text-align: center;
 }
 
-/* título */
 .project-detail-container h2 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -893,7 +848,6 @@ textarea:focus {
   text-shadow: 0 0 10px #6f2bff;
 }
 
-/* texto */
 .project-text {
   color: #aaa;
   font-size: 16px;

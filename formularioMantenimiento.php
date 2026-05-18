@@ -6,37 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantenimiento</title>
      <style>
-    body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+              
+        /* TÍTULO */
+        .tittle-formulario {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #6f2bff;  
+        }
+        .textos {
+            margin-top: 10px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+        .form-servicios {
+            width: 550px;
+        }
+        .container {
+            display: flex;
+            max-width: 1030px;
+            margin: 40px auto;
+            gap: 25px;
+        }
 
-}
-.tittle-formulario {
-    text-align: center;
-    margin-bottom: 20px;
-}
-h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #FFFFFF;
-    text-shadow: 0 0 10px #6f2bff;  
-}
-.textos {
-    margin-top: 10px;
-    margin-bottom: 18px;
-    font-size: 14px;
-}
-.form-servicios {
-    width: 550px;
-}
-.container {
-    display: flex;
-    max-width: 1030px;
-    margin: 40px auto;
-    gap: 25px;
-}
 .menu-padre {
     width: 200px;
     padding-right: 50px;
@@ -279,18 +281,18 @@ input:focus {
   border-image: linear-gradient(90deg, #22ADED, #AF56DB) 1;
   padding-bottom: 1px;
 }
-    </style>
+</style>
 </head>
 
 <body>
     <div>
         <?php include_once ('header.php');?>
     </div>
-      <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
       <ol>
         <li><a href="index.php">Inicio</a></li>
         <li><a href="Servicios.php">Servicios</a></li>
-        <li aria-current="page">Formulario de Pagina</li>
+        <li aria-current="page">Formulario de Mantenimiento</li>
       </ol>
     </nav>
     <div class="tittle-formulario">
