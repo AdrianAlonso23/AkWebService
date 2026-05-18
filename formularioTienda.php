@@ -363,8 +363,8 @@ input:focus {
                             </span>
                         </div>
                         <div class="numbers">
-                            <button id="pagoBizum">Bizum</button>
-                            <button id="pagoTransferencia">Transferencia</button>
+                            <button type="button" id="pagoBizum">Bizum</button>
+                            <button type="button" id="pagoTransferencia">Transferencia</button>
                         </div>
                     </div>
 
@@ -378,8 +378,8 @@ input:focus {
                             </span>
                         </div>
                         <div class="numbers">
-                            <button id="envioSi">Sí</button>
-                            <button id="envioNo">No</button>
+                            <button type="button"id="envioSi">Sí</button>
+                            <button type="button" id="envioNo">No</button>
                         </div>
                     </div>
                     <div id="extras" class="service-block">
@@ -394,13 +394,13 @@ input:focus {
                             </span>
                         </div>               
                         <div class="numbers tooltip ">
-                            <button id="ExtraSEO" data-tooltip="Optimización SEO básica para mejorar visibilidad en Google">
+                            <button type="button" id="ExtraSEO" data-tooltip="Optimización SEO básica para mejorar visibilidad en Google">
                                 SEO
                             </button>
-                            <button id="ExtraAreaClientes" data-tooltip="Área privada para clientes con historial de pedidos">
+                            <button type="button" id="ExtraAreaClientes" data-tooltip="Área privada para clientes con historial de pedidos">
                                 Área de clientes
                             </button>
-                            <button id="ExtraCupones" data-tooltip="Sistema de cupones y descuentos configurables">
+                            <button type="button" id="ExtraCupones" data-tooltip="Sistema de cupones y descuentos configurables">
                                 Cupones
                             </button>
 
@@ -446,6 +446,7 @@ input:focus {
         // PRODUCTOS
         for (let i = 10; i <= 200; i += 10) {
             const btn = document.createElement("button");
+            btn.type = "button";
             btn.textContent = i;
             btn.onclick = () => {
                 productos = i;

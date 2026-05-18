@@ -154,32 +154,20 @@
 
         /* BOTÓN ENVIAR */
         .btn-enviar {
-            background: linear-gradient(90deg, #a56fff, #6f2bff);
-            color: #000;
-            width: 100%;
-            padding: 14px;
+            background: linear-gradient(90deg, #22ADED, #AF56DB);
             border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 17px;
+            padding: 12px 25px;
+            border-radius: 12px;
+            color: white;
             font-weight: bold;
-            transition: 0.25s;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
         }
-
         .btn-enviar:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 18px #a56fff;
-        }
-        .textos{
-            margin-top: 10px;
-            margin-bottom: 18px;
-            color: #b98cff;
-            font-size: 14px;
-            line-height: 1.6;
-            background: rgba(111, 43, 255, 0.08);
-            padding: 12px 15px;
-            border-left: 3px solid #6f2bff;
-            border-radius: 8px;
+            box-shadow: 0 0 20px #a56fff;
         }
         .form-servicios{
             width: 550px;
@@ -554,6 +542,7 @@
         // Crear botones 1-12
         for (let i = 1; i <= 12; i++) {
             const btn = document.createElement('button');
+            btn.type = "button";
             btn.textContent = i;
             btn.addEventListener('click', () => {
                 apartados = i;
@@ -603,6 +592,7 @@
         // crear idiomas
         for (let i = 1; i <= 3; i++) {
             const btn = document.createElement('button');
+            btn.type = "button";
             btn.textContent = i;
             btn.addEventListener('click', () => {
                 apartadosIdiomas = i;
@@ -677,7 +667,7 @@
 
             totalSpan.textContent = total;
         }
-        const form = document.getElementById("formEcommerce");
+        const form = document.getElementById("formPagina");
 
         form.addEventListener("submit", function (e) {
             e.preventDefault(); // evita recarga (opcional)
