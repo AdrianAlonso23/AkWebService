@@ -6,47 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantenimiento</title>
      <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
-.tittle-formulario {
-    height: 230px;
-    background-image: url('img/fondo-formularios.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #6f2bff;
-    box-shadow: 0 0 25px rgba(162, 93, 255, 0.4);
-}
-h2 {
-    font-size: 40px;
-    text-shadow: 0 0 15px #a56fff;
-}
-.textos {
-    margin-top: 10px;
-    margin-bottom: 18px;
-    color: #b98cff;
-    font-size: 14px;
-    line-height: 1.6;
-    background: rgba(111, 43, 255, 0.08);
-    padding: 12px 15px;
-    border-left: 3px solid #6f2bff;
-    border-radius: 8px;
-}
-.form-servicios {
-    width: 550px;
-}
-.container {
-    display: flex;
-    max-width: 1030px;
-    margin: 40px auto;
-    gap: 25px;
-}
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+              
+        /* TÍTULO */
+        .tittle-formulario {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #6f2bff;  
+        }
+        .textos {
+            margin-top: 10px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+        .form-servicios {
+            width: 550px;
+        }
+        .container {
+            display: flex;
+            max-width: 1030px;
+            margin: 40px auto;
+            gap: 25px;
+        }
+
 .menu-padre {
     width: 200px;
     padding-right: 50px;
@@ -289,7 +281,7 @@ input:focus {
   border-image: linear-gradient(90deg, #22ADED, #AF56DB) 1;
   padding-bottom: 1px;
 }
-    </style>
+</style>
 </head>
 
 <body>
@@ -303,6 +295,17 @@ input:focus {
         <li aria-current="page">Formulario de Mantenimiento</li>
       </ol>
     </nav>
+    <div class="tittle-formulario">
+        <h1>Formulario</h3>
+    </div>
+    <div class="container">
+        <h5 class="textos">
+            Configura tu tienda online seleccionando las opciones que mejor se adapten a tu negocio. 
+            Elige productos, métodos de pago, envíos y funcionalidades extra de forma sencilla. 
+            El presupuesto se calculará automáticamente en tiempo real según tus elecciones. 
+            Al finalizar, podrás enviar tu solicitud para recibir una propuesta personalizada.
+        </h5>
+    </div>
     <form id="formMantenimiento">
         <div class="container">
             <!-- MENÚ IZQUIERDO -->
@@ -317,14 +320,6 @@ input:focus {
                 </div>
             </div>
             <div class="form-servicios">
-                <div>
-                    <h3>Formulario</h3>
-                    <h5 class="textos">
-                        Mantén tu página web siempre actualizada, segura y optimizada con nuestros planes de mantenimiento mensual. 
-                        Nos encargamos de la parte técnica para que tú puedas centrarte en hacer crecer tu negocio. 
-                        Elige el plan que mejor se adapte a tus necesidades y nivel de soporte requerido.
-                    </h5>
-                </div>
                 <!-- CONTENT --> 
                 <div class="content">
                     
@@ -336,7 +331,7 @@ input:focus {
                     
                     <div  class="service-block">
                         <h3>1. Mantenimiento Básico</h3>
-                        <button id="mantBasico"  class="numbers">
+                        <button type="button" id="mantBasico" class="numbers">
                             Básico · 30€/mes
                         </button>
                     </div>
@@ -351,7 +346,7 @@ input:focus {
                                 </span>
                             </span>
                         </div>
-                        <button id="mantAvanzado" class="numbers">
+                        <button type="button" id="mantAvanzado" class="numbers">
                             Avanzado · 60€/mes
                         </button>
                     </div>
@@ -366,7 +361,7 @@ input:focus {
                                 </span>
                             </span>
                         </div>
-                        <button id="mantPremium" class="numbers">
+                        <button type="button" id="mantPremium" class="numbers">
                             Premium · 100€/mes
                         </button>
                     </div>
@@ -411,7 +406,7 @@ input:focus {
             totalSpan.textContent = total;
         }
 
-        const form = document.getElementById("formEcommerce");
+        const form = document.getElementById("formMantenimiento");
 
         form.addEventListener("submit", function (e) {
             e.preventDefault(); // evita recarga (opcional)
