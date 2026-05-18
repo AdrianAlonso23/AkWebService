@@ -3,6 +3,13 @@
 <div>
     <?php include_once('header.php'); ?>
 </div>
+ <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="Blog.php">Blogs</a></li>
+        <li aria-current="page">Articulo blog</li>
+      </ol>
+</nav>
 
 <div id="primary" class="content-area">
 <main id="main" class="site-main">

@@ -2,7 +2,9 @@
 <div>
     <?php include_once ('header.php'); ?>
 </div>
-
+<div class="tittle-contact">
+        <h2>BLOG</h2>
+</div>
 <div id="posts">
 <?php
 $response = file_get_contents("https://akwebservice.bernat26.es/?rest_route=/wp/v2/posts&categories=4");
