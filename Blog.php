@@ -3,7 +3,7 @@
     <?php include_once ('header.php'); ?>
 </div>
 <div class="tittle-contact">
-        <h2>BLOG</h2>
+        <h2>BLOGS</h2>
 </div>
 <div id="posts">
 <?php
