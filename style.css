@@ -523,15 +523,21 @@ textarea:focus {
 
 #posts article {
   background-color: #0b0b0d;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 20px;
+  padding: 40px;
+   border: 1px solid #6f2bff;
+  box-shadow: 0 0 20px rgba(162, 93, 255, 0.3);
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #posts article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(162, 93, 255, 0.6);
 }
 
 #posts article h2 a {
