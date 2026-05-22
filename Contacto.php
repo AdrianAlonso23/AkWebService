@@ -23,29 +23,61 @@
                 Responderemos a la consulta con la máxima brevedad. Muchas gracias por tu confianza.
             </p>
 
-            <form action="mailto:akwebservices1234@gmail.com">
+            <form id="contactForm">
                 <div>
                     <label for="Nombre">Nombre</label>
-                    <input type="text" placeholder="Tu Nombre" id="Nombre">
+                    <input type="text" name="name" placeholder="Tu Nombre" id="Nombre" required>
                 </div>
                 <div>
                     <label for="Email">Email</label>
-                    <input type="text" placeholder="Tu Email">
+                    <input type="text" name="email" placeholder="Tu Email" required>
                 </div>
                 <div>
                     <label for="Telefono">Telefono</label>
-                    <input type="text" placeholder="Tu Teléfono">
+                    <input type="text" name="phone" placeholder="Tu Teléfono" required>
                 </div>  
                 <div>
                     <label for="Asunto">Asunto</label>
-                    <input type="text" placeholder="Asunto">
+                    <input type="text" name="subject" placeholder="Asunto" required>
                 </div>
                 <div>
                     <label for="Mensaje">Mensaje</label>
-                    <textarea placeholder="Mensaje" rows="5"></textarea>
+                    <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="boton-contacto">Enviar Mensaje</button>
             </form>
+            <script>
+                document.getElementById("contactForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const form = e.target;
+
+                const data = {
+                    name: form.querySelector('[name="name"]').value,
+                    email: form.querySelector('[name="email"]').value,
+                    phone: form.querySelector('[name="phone"]').value,
+                    subject: form.querySelector('[name="subject"]').value,
+                    message: form.querySelector('[name="message"]').value
+                };
+
+                const response = await fetch("https://akwebservice.bernat26.es/wp-json/ak/v1/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.status === "ok") {
+                    alert("Mensaje enviado");
+                    form.reset();
+                } else {
+                    alert("Error al enviar");
+                }
+            });
+            </script>
         </div>
 
         <div class="d-contacto">
