@@ -436,7 +436,7 @@ input:focus {
         const extraSEO = document.getElementById("ExtraSEO");
         const extraClientes = document.getElementById("ExtraAreaClientes");
         const extraCupones = document.getElementById("ExtraCupones");
-        const extraEmails = document.getElementById("ExtraEmailsAutomaticos");
+
 
         let productos = 0;
         let envio = false;
@@ -496,7 +496,7 @@ input:focus {
         toggleExtra(extraSEO);
         toggleExtra(extraClientes);
         toggleExtra(extraCupones);
-        toggleExtra(extraEmails);
+
 
         function calcular() {
             let total =
